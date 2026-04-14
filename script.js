@@ -145,43 +145,55 @@
     });
   });
 
-  // ─────────────────────────────────────────
-  // 6. ANATOMICA: hotspot + region card interaction
-  // ─────────────────────────────────────────
-  const hotspots   = document.querySelectorAll('.anat-hotspot');
-  const regionCards = document.querySelectorAll('.region-card');
+ // ─────────────────────────────────────────
+// 6. ANATOMICA: hotspot + region card
+// ─────────────────────────────────────────
+const skHotspots  = document.querySelectorAll('.sk-hotspot');
+const regionCards = document.querySelectorAll('.region-card');
 
-  function activateRegion(region) {
-    // Deactivate all
-    regionCards.forEach(function (card) {
-      card.style.background = '';
-      card.style.borderColor = '';
-    });
+function activateRegion(region) {
+  regionCards.forEach(function (card) {
+    card.style.background = '';
+    card.style.borderColor = '';
+  });
+  skHotspots.forEach(function (hs) {
+    hs.classList.remove('is-active');
+  });
 
-    // Activate matching card
-    const target = document.querySelector('.region-card[data-region="' + region + '"]');
-    if (target) {
-      target.style.background = 'rgba(255,255,255,0.12)';
-      target.style.borderColor = 'rgba(255,255,255,0.28)';
-      target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
+  const targetCard = document.querySelector('.region-card[data-region="' + region + '"]');
+  if (targetCard) {
+    targetCard.style.background = 'rgba(255,255,255,0.12)';
+    targetCard.style.borderColor = 'rgba(255,255,255,0.28)';
+    targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
-  hotspots.forEach(function (hotspot) {
-    hotspot.addEventListener('mouseenter', function () {
-      activateRegion(this.dataset.region);
-    });
-    hotspot.addEventListener('click', function () {
-      activateRegion(this.dataset.region);
-    });
-  });
+  const targetHotspot = document.querySelector('.sk-hotspot[data-region="' + region + '"]');
+  if (targetHotspot) {
+    targetHotspot.classList.add('is-active');
+  }
+}
 
-  regionCards.forEach(function (card) {
-    card.addEventListener('mouseleave', function () {
-      card.style.background = '';
-      card.style.borderColor = '';
+skHotspots.forEach(function (hs) {
+  hs.addEventListener('click', function () {
+    activateRegion(this.dataset.region);
+  });
+  hs.addEventListener('mouseenter', function () {
+    activateRegion(this.dataset.region);
+  });
+});
+
+regionCards.forEach(function (card) {
+  card.addEventListener('mouseenter', function () {
+    activateRegion(this.dataset.region);
+  });
+  card.addEventListener('mouseleave', function () {
+    card.style.background = '';
+    card.style.borderColor = '';
+    skHotspots.forEach(function (hs) {
+      hs.classList.remove('is-active');
     });
   });
+});
 
   // ─────────────────────────────────────────
   // 7. HERO skeleton hotspot tooltip (optional enhancement)

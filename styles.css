@@ -2256,3 +2256,102 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* ─────────────────────────────────────────
+   ESQUELETO CON HOTSPOTS REALES
+   ───────────────────────────────────────── */
+.skeleton-hotspot-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.skeleton-real-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 32px rgba(0,0,0,0.25));
+}
+
+/* Hotspot base */
+.sk-hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px;
+  z-index: 10;
+}
+
+/* Punto pulsante */
+.sk-hotspot-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  display: block;
+  transition: transform 0.2s ease;
+}
+.sk-hotspot:hover .sk-hotspot-dot {
+  transform: scale(1.4);
+}
+
+/* Anillo pulsante */
+.sk-hotspot-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  animation: hotspot-ring 2s ease-in-out infinite;
+  opacity: 0;
+}
+@keyframes hotspot-ring {
+  0%   { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.sk-hotspot-dot--yellow  { background: var(--color-accent-yellow); color: var(--color-accent-yellow); }
+.sk-hotspot-dot--green   { background: var(--color-green-vivo);    color: var(--color-green-vivo); }
+.sk-hotspot-dot--mostaza { background: var(--color-mostaza);       color: var(--color-mostaza); }
+.sk-hotspot-dot--coral   { background: var(--color-coral);         color: var(--color-coral); }
+
+/* Etiqueta flotante */
+.sk-hotspot-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #1a1a1a;
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateX(-4px);
+}
+.sk-hotspot-label--left {
+  order: -1;
+  transform: translateX(4px);
+}
+.sk-hotspot:hover .sk-hotspot-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hotspot activo desde interacción con tarjetas */
+.sk-hotspot.is-active .sk-hotspot-dot {
+  transform: scale(1.5);
+}
+.sk-hotspot.is-active .sk-hotspot-label {
+  opacity: 1;
+  transform: translateX(0);
+}
