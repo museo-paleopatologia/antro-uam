@@ -248,3 +248,15 @@
   document.body.prepend(skipLink);
 
 })();
+
+// ─────────────────────────────────────────
+// PARALLAX HERO
+// ─────────────────────────────────────────
+const heroBgImg = document.querySelector('.hero-bg-img');
+
+if (heroBgImg) {
+  window.addEventListener('scroll', function () {
+    const scrollY = window.scrollY;
+    heroBgImg.style.transform = 'translateY(' + scrollY * 0.3 + 'px)';
+  }, { passive: true });
+}
