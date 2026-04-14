@@ -1557,3 +1557,24 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+
+.uam-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+}
+
+.lpp-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
