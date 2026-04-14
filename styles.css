@@ -421,19 +421,27 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   overflow: hidden;
   border-bottom: 3px solid #1a1a1a;
   flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem 1rem 0;
+
 }
 .hmod-img-wrap--sm {
-  height: 130px;
+  height: 140px;
+  padding: 0.75rem 0.75rem 0;
 }
 .hmod-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: bottom;
   display: block;
+  mix-blend-mode: multiply;
   transition: transform 0.4s ease;
 }
 .hmod-card:hover .hmod-img {
-  transform: scale(1.04);
+  transform: scale(1.05) translateY(-4px);
 }
 
 /* ── Cuerpo de texto ── */
@@ -456,8 +464,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: clamp(1.6rem, 2.2vw, 2rem);
   font-weight: 800;
   line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #1a1a1a;
   transition: color 0.18s ease;
 }
 .hmod-title-link:hover .hmod-title {
@@ -474,8 +483,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: 1.35rem;
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #1a1a1a;
   transition: color 0.18s ease;
 }
 .hmod-title-link:hover .hmod-title-sm {
@@ -517,9 +527,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
   letter-spacing: 0.02em;
 }
-.hmod-card--anatomica  .hmod-tag:hover { background: var(--anat-hover); border-color: var(--anat-hover); color: #1a1a1a; }
-.hmod-card--patologica .hmod-tag:hover { background: var(--pato-hover); border-color: var(--pato-hover); color: #1a1a1a; }
-
+.hmod-card--anatomica  .hmod-title-link:hover .hmod-title { color: var(--anat-hover); text-decoration-color: var(--anat-hover); }
+.hmod-card--patologica .hmod-title-link:hover .hmod-title { color: var(--pato-hover); text-decoration-color: var(--pato-hover); }
+.hmod-card--aula       .hmod-title-link:hover .hmod-title-sm { color: var(--aula-hover); text-decoration-color: var(--aula-hover); }
+.hmod-card--actualidad .hmod-title-link:hover .hmod-title-sm { color: var(--actu-hover); text-decoration-color: var(--actu-hover); }
 /* ── Botón principal ── */
 .hmod-btn {
   display: block;
