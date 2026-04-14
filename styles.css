@@ -65,8 +65,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--cream);
-  color: var(--ink);
+  background-color: hotpink;
+  color: black;
   line-height: 1.7;
   overflow-x: hidden;
 }
