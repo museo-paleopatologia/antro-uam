@@ -5,21 +5,30 @@
 
 /* ── CSS CUSTOM PROPERTIES ── */
 :root {
-  /* Palette */
-  --cream:        #f5f0e8;
-  --cream-dark:   #ede7d9;
-  --parchment:    #e8dfc8;
-  --ink:          #1a1a18;
-  --ink-soft:     #3d3d38;
-  --ink-muted:    #6b6b60;
-  --green:        #3d5c47;
-  --green-light:  #5a7d64;
-  --green-pale:   #c8d9cb;
-  --blue-dark:    #1e3248;
-  --blue-mid:     #2b4a6b;
-  --gold:         #9a7c3a;
-  --gold-light:   #c4a45a;
+  /* Nueva paleta inspirada en tu prototipo */
+  --cream:        #f7f3eb;
+  --cream-dark:   #efe6d6;
+  --parchment:    #fac068;
+
+  --ink:          #2a1f22;
+  --ink-soft:     #4a3a3d;
+  --ink-muted:    #7a6a6d;
+
+  --green:        #4a7729;
+  --green-light:  #2da641;
+  --green-pale:   #d7e7cf;
+
+  --blue-dark:    #1c5d91;
+  --blue-mid:     #0077c8;
+
+  --gold:         #f6c35b;
+  --gold-light:   #fffd01;
+
+  --accent-coral: #f6513b;
+  --accent-wine:  #8f243c;
+
   --white:        #ffffff;
+}
 
   /* Typography */
   --font-serif:   'Cormorant Garamond', Georgia, serif;
