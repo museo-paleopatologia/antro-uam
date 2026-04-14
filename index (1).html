@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Museo Virtual de Paleopatología — UAM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Lexend+Exa:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="uam-logo-wrap">
+          <div class="uam-logo-mark">
+            <span class="uam-initials">UAM</span>
+          </div>
+          <div class="uam-text">
+            <span class="uam-full">Universidad Autónoma de Madrid</span>
+            <span class="uam-dept">Dpto. de Antropología Física</span>
+          </div>
+        </div>
+        <div class="brand-divider"></div>
+        <div class="brand-name">
+          <span class="brand-acronym">MVP</span>
+          <span class="brand-subtitle">Museo Virtual<br>de Paleopatología</span>
+        </div>
+      </div>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#anatomica" class="nav-link">Exploración anatómica</a></li>
+          <li><a href="#patologica" class="nav-link">Exploración patológica</a></li>
+          <li><a href="#coleccion" class="nav-link">Colección</a></li>
+          <li><a href="#aula" class="nav-link">Aula virtual</a></li>
+          <li><a href="#actualidad" class="nav-link">Actualidad</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="inicio">
+      <div class="hero-grid">
+
+        <!-- Left col: text -->
+        <div class="hero-content">
+          <div class="hero-label">
+            <span class="label-dot"></span>
+            Proyecto académico · UAM · Paleopatología
+          </div>
+          <h1 class="hero-title">
+            <span class="hero-title-line hero-title-line--1">Museo</span>
+            <span class="hero-title-line hero-title-line--2">Virtual de</span>
+            <span class="hero-title-line hero-title-line--3">Paleopato<span class="title-accent">logía</span></span>
+          </h1>
+          <p class="hero-sub">
+            Plataforma académica dedicada al estudio, conservación y divulgación de patologías óseas en contextos históricos y arqueológicos.
+          </p>
+          <div class="hero-ctas">
+            <a href="#anatomica" class="btn btn--primary">
+              <span>Explorar anatómicamente</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#coleccion" class="btn btn--outline">
+              <span>Ver la colección</span>
+            </a>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-stat">
+              <span class="stat-num">+340</span>
+              <span class="stat-label">Piezas documentadas</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-num">12</span>
+              <span class="stat-label">Categorías patológicas</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-num">4</span>
+              <span class="stat-label">Regiones anatómicas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right col: visual -->
+        <div class="hero-visual">
+          <div class="skeleton-diagram">
+            <div class="skeleton-bg-circle"></div>
+            <svg class="skeleton-svg" viewBox="0 0 320 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Grid lines -->
+              <line x1="160" y1="0" x2="160" y2="520" stroke="var(--color-accent-yellow)" stroke-width="0.4" opacity="0.3" stroke-dasharray="4 6"/>
+              <line x1="0" y1="260" x2="320" y2="260" stroke="var(--color-accent-yellow)" stroke-width="0.4" opacity="0.3" stroke-dasharray="4 6"/>
+              <!-- Skull -->
+              <ellipse cx="160" cy="52" rx="42" ry="38" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.8"/>
+              <ellipse cx="160" cy="64" rx="30" ry="18" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.2" opacity="0.5"/>
+              <line x1="134" y1="72" x2="186" y2="72" stroke="var(--color-blue-dark)" stroke-width="1"/>
+              <!-- Cervical -->
+              <rect x="153" y="88" width="14" height="8" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <rect x="153" y="97" width="14" height="8" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <rect x="153" y="106" width="14" height="8" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <!-- Thorax -->
+              <path d="M120 118 Q160 112 200 118 L196 210 Q160 220 124 210 Z" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.8"/>
+              <!-- Ribs -->
+              <path d="M148 128 Q126 136 120 148" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <path d="M148 140 Q124 148 118 162" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <path d="M148 152 Q124 162 120 176" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <path d="M148 164 Q126 174 122 188" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <path d="M148 176 Q128 186 126 200" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <path d="M172 128 Q194 136 200 148" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <path d="M172 140 Q196 148 202 162" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <path d="M172 152 Q196 162 200 176" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <path d="M172 164 Q194 174 198 188" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <path d="M172 176 Q192 186 194 200" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+              <!-- Sternum -->
+              <rect x="154" y="124" width="12" height="84" rx="4" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <!-- Lumbar -->
+              <rect x="152" y="214" width="16" height="9" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <rect x="152" y="224" width="16" height="9" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <rect x="152" y="234" width="16" height="9" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <!-- Pelvis -->
+              <path d="M110 250 Q160 240 210 250 Q216 280 210 296 Q160 306 110 296 Q104 280 110 250Z" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.8"/>
+              <line x1="160" y1="244" x2="160" y2="302" stroke="var(--color-blue-dark)" stroke-width="1.2"/>
+              <!-- Upper arms -->
+              <line x1="112" y1="126" x2="90" y2="200" stroke="var(--color-blue-dark)" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="208" y1="126" x2="230" y2="200" stroke="var(--color-blue-dark)" stroke-width="2.2" stroke-linecap="round"/>
+              <!-- Forearms -->
+              <line x1="90" y1="204" x2="76" y2="270" stroke="var(--color-blue-dark)" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="94" y1="204" x2="82" y2="274" stroke="var(--color-blue-dark)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+              <line x1="230" y1="204" x2="244" y2="270" stroke="var(--color-blue-dark)" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="226" y1="204" x2="238" y2="274" stroke="var(--color-blue-dark)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+              <!-- Hands -->
+              <ellipse cx="78" cy="278" rx="9" ry="12" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <ellipse cx="242" cy="278" rx="9" ry="12" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <!-- Femurs -->
+              <line x1="138" y1="302" x2="130" y2="400" stroke="var(--color-blue-dark)" stroke-width="2.4" stroke-linecap="round"/>
+              <line x1="182" y1="302" x2="190" y2="400" stroke="var(--color-blue-dark)" stroke-width="2.4" stroke-linecap="round"/>
+              <!-- Tibias -->
+              <line x1="130" y1="404" x2="126" y2="486" stroke="var(--color-blue-dark)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="134" y1="404" x2="132" y2="488" stroke="var(--color-blue-dark)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+              <line x1="190" y1="404" x2="194" y2="486" stroke="var(--color-blue-dark)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="186" y1="404" x2="188" y2="488" stroke="var(--color-blue-dark)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+              <!-- Feet -->
+              <ellipse cx="127" cy="494" rx="12" ry="7" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+              <ellipse cx="193" cy="494" rx="12" ry="7" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+
+              <!-- Hotspot dots -->
+              <circle cx="160" cy="52" r="5" fill="var(--color-accent-yellow)" class="hotspot" data-label="Cráneo"/>
+              <circle cx="160" cy="165" r="5" fill="var(--color-green-vivo)" class="hotspot" data-label="Tronco"/>
+              <circle cx="80" cy="236" r="5" fill="var(--color-mostaza)" class="hotspot" data-label="Miembro superior"/>
+              <circle cx="160" cy="395" r="5" fill="var(--color-coral)" class="hotspot" data-label="Miembro inferior"/>
+            </svg>
+
+            <!-- Labels flotantes -->
+            <div class="skeleton-label sk-label--skull">
+              <span class="sk-dot sk-dot--yellow"></span>
+              <span>Cráneo</span>
+            </div>
+            <div class="skeleton-label sk-label--trunk">
+              <span class="sk-dot sk-dot--green"></span>
+              <span>Tronco</span>
+            </div>
+            <div class="skeleton-label sk-label--upper">
+              <span class="sk-dot sk-dot--mostaza"></span>
+              <span>Miembros sup.</span>
+            </div>
+            <div class="skeleton-label sk-label--lower">
+              <span class="sk-dot sk-dot--coral"></span>
+              <span>Miembros inf.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>Explorar</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BLOQUES PRINCIPALES DE ACCESO
+    ============================================================ -->
+    <section class="modules-section" id="modulos">
+      <div class="section-header">
+        <span class="section-tag">Acceso principal</span>
+        <h2 class="section-title">Los módulos del museo</h2>
+      </div>
+      <div class="modules-grid">
+
+        <article class="module-card module-card--anatomica">
+          <div class="module-card-inner">
+            <div class="module-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18" cy="8" r="5" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="18" y1="13" x2="18" y2="28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="10" y1="18" x2="26" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="18" y1="28" x2="13" y2="36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="18" y1="28" x2="23" y2="36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="module-number">01</div>
+            <h3 class="module-title">Exploración<br>anatómica</h3>
+            <p class="module-desc">Navega el esqueleto humano por regiones. Accede a las patologías documentadas en cada estructura ósea.</p>
+            <a href="#anatomica" class="module-link">
+              <span>Explorar</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="module-card module-card--patologica">
+          <div class="module-card-inner">
+            <div class="module-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="28" height="28" rx="4" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="12" y1="12" x2="24" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="12" y1="18" x2="24" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="12" y1="24" x2="19" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="27" cy="27" r="4" fill="var(--color-coral)" stroke="none"/>
+              </svg>
+            </div>
+            <div class="module-number">02</div>
+            <h3 class="module-title">Exploración<br>patológica</h3>
+            <p class="module-desc">Clasificación sistemática de patologías óseas: traumáticas, infecciosas, degenerativas, metabólicas y más.</p>
+            <a href="#patologica" class="module-link">
+              <span>Explorar</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="module-card module-card--coleccion">
+          <div class="module-card-inner">
+            <div class="module-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="16" width="24" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M10 16V12a8 8 0 0116 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <circle cx="18" cy="23" r="3" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="module-number">03</div>
+            <h3 class="module-title">Colección</h3>
+            <p class="module-desc">Acceso al repositorio de piezas osteológicas del Departamento de Antropología de la UAM con fichas científicas.</p>
+            <a href="#coleccion" class="module-link">
+              <span>Ver colección</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="module-card module-card--aula">
+          <div class="module-card-inner">
+            <div class="module-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 28L18 8l14 20H4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <line x1="18" y1="8" x2="18" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="12" y1="22" x2="24" y2="22" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="module-number">04</div>
+            <h3 class="module-title">Aula virtual</h3>
+            <p class="module-desc">Recursos didácticos, conceptos básicos, materiales de estudio, bibliografía especializada y actividades educativas.</p>
+            <a href="#aula" class="module-link">
+              <span>Acceder</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="module-card module-card--actualidad">
+          <div class="module-card-inner">
+            <div class="module-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="8" width="28" height="22" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="4" y1="14" x2="32" y2="14" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="11" cy="11" r="1.5" fill="currentColor"/>
+                <circle cx="17" cy="11" r="1.5" fill="currentColor"/>
+                <line x1="10" y1="20" x2="26" y2="20" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
+                <line x1="10" y1="25" x2="20" y2="25" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="module-number">05</div>
+            <h3 class="module-title">Actualidad</h3>
+            <p class="module-desc">Noticias, publicaciones científicas, novedades del proyecto y eventos académicos relacionados con la paleopatología.</p>
+            <a href="#actualidad" class="module-link">
+              <span>Ver noticias</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPLORACIÓN ANATÓMICA
+    ============================================================ -->
+    <section class="anatomica-section" id="anatomica">
+      <div class="anatomica-inner">
+
+        <div class="anatomica-header">
+          <span class="section-tag section-tag--light">Módulo 01</span>
+          <h2 class="section-title">Exploración anatómica</h2>
+          <p class="section-desc">La navegación principal del museo se organiza por regiones del esqueleto humano. Selecciona una región para acceder al catálogo de patologías documentadas en esa zona.</p>
+        </div>
+
+        <div class="anatomica-layout">
+
+          <!-- Skeleton interactive figure -->
+          <div class="anatomica-figure">
+            <div class="anatomica-skeleton-wrap">
+              <svg class="anatomica-svg" viewBox="0 0 280 500" xmlns="http://www.w3.org/2000/svg" aria-label="Esqueleto humano con regiones anatómicas">
+                <!-- Skull area highlight -->
+                <ellipse cx="140" cy="50" rx="50" ry="44" fill="var(--color-accent-yellow)" opacity="0.08" class="region-highlight" id="hl-skull"/>
+                <ellipse cx="140" cy="50" rx="42" ry="38" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.8"/>
+                <ellipse cx="140" cy="62" rx="30" ry="18" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.2" opacity="0.5"/>
+                <line x1="114" y1="70" x2="166" y2="70" stroke="var(--color-blue-dark)" stroke-width="1"/>
+                <!-- Cervical -->
+                <rect x="133" y="87" width="14" height="8" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <rect x="133" y="96" width="14" height="8" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <rect x="133" y="105" width="14" height="8" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <!-- Thorax highlight -->
+                <path d="M96 116 Q140 110 184 116 L180 208 Q140 218 100 208 Z" fill="var(--color-green-vivo)" opacity="0.06" class="region-highlight" id="hl-trunk"/>
+                <path d="M96 116 Q140 110 184 116 L180 208 Q140 218 100 208 Z" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.8"/>
+                <!-- Ribs -->
+                <path d="M128 126 Q106 134 100 146" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <path d="M128 138 Q104 146 98 160" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <path d="M128 150 Q104 160 100 174" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <path d="M128 162 Q106 172 102 186" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <path d="M128 174 Q108 184 106 198" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <path d="M152 126 Q174 134 180 146" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <path d="M152 138 Q176 146 182 160" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <path d="M152 150 Q176 160 180 174" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <path d="M152 162 Q174 172 178 186" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <path d="M152 174 Q172 184 174 198" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.1" opacity="0.7"/>
+                <rect x="134" y="122" width="12" height="84" rx="4" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <!-- Lumbar -->
+                <rect x="132" y="212" width="16" height="9" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <rect x="132" y="222" width="16" height="9" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <rect x="132" y="232" width="16" height="9" rx="2" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <!-- Pelvis -->
+                <path d="M88 246 Q140 236 192 246 Q198 276 192 292 Q140 302 88 292 Q82 276 88 246Z" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.8"/>
+                <line x1="140" y1="240" x2="140" y2="298" stroke="var(--color-blue-dark)" stroke-width="1.2"/>
+                <!-- Upper arms highlight -->
+                <rect x="64" y="118" width="24" height="90" rx="12" fill="var(--color-mostaza)" opacity="0.1" class="region-highlight" id="hl-upper"/>
+                <rect x="192" y="118" width="24" height="90" rx="12" fill="var(--color-mostaza)" opacity="0.1"/>
+                <line x1="92" y1="124" x2="72" y2="196" stroke="var(--color-blue-dark)" stroke-width="2.2" stroke-linecap="round"/>
+                <line x1="188" y1="124" x2="208" y2="196" stroke="var(--color-blue-dark)" stroke-width="2.2" stroke-linecap="round"/>
+                <!-- Forearms -->
+                <line x1="72" y1="200" x2="60" y2="264" stroke="var(--color-blue-dark)" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="76" y1="200" x2="66" y2="268" stroke="var(--color-blue-dark)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+                <line x1="208" y1="200" x2="220" y2="264" stroke="var(--color-blue-dark)" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="204" y1="200" x2="214" y2="268" stroke="var(--color-blue-dark)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+                <!-- Hands -->
+                <ellipse cx="62" cy="272" rx="9" ry="11" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <ellipse cx="218" cy="272" rx="9" ry="11" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <!-- Femurs highlight -->
+                <rect x="104" y="296" width="24" height="108" rx="12" fill="var(--color-coral)" opacity="0.08" class="region-highlight" id="hl-lower"/>
+                <rect x="152" y="296" width="24" height="108" rx="12" fill="var(--color-coral)" opacity="0.08"/>
+                <line x1="120" y1="298" x2="112" y2="392" stroke="var(--color-blue-dark)" stroke-width="2.4" stroke-linecap="round"/>
+                <line x1="160" y1="298" x2="168" y2="392" stroke="var(--color-blue-dark)" stroke-width="2.4" stroke-linecap="round"/>
+                <!-- Tibias -->
+                <line x1="112" y1="396" x2="108" y2="476" stroke="var(--color-blue-dark)" stroke-width="2" stroke-linecap="round"/>
+                <line x1="116" y1="396" x2="114" y2="478" stroke="var(--color-blue-dark)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+                <line x1="168" y1="396" x2="172" y2="476" stroke="var(--color-blue-dark)" stroke-width="2" stroke-linecap="round"/>
+                <line x1="164" y1="396" x2="166" y2="478" stroke="var(--color-blue-dark)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+                <!-- Feet -->
+                <ellipse cx="109" cy="483" rx="12" ry="7" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+                <ellipse cx="171" cy="483" rx="12" ry="7" fill="none" stroke="var(--color-blue-dark)" stroke-width="1.4"/>
+
+                <!-- Active hotspots -->
+                <circle cx="140" cy="50" r="6" fill="var(--color-accent-yellow)" class="anat-hotspot" data-region="cranio"/>
+                <circle cx="140" cy="160" r="6" fill="var(--color-green-vivo)" class="anat-hotspot" data-region="tronco"/>
+                <circle cx="66" cy="232" r="6" fill="var(--color-mostaza)" class="anat-hotspot" data-region="sup"/>
+                <circle cx="214" cy="232" r="6" fill="var(--color-mostaza)" class="anat-hotspot" data-region="sup"/>
+                <circle cx="140" cy="390" r="6" fill="var(--color-coral)" class="anat-hotspot" data-region="inf"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Region cards -->
+          <div class="anatomica-cards">
+
+            <article class="region-card" data-region="cranio">
+              <div class="region-card-header">
+                <div class="region-dot region-dot--yellow"></div>
+                <span class="region-code">R.01</span>
+              </div>
+              <h3 class="region-title">Cráneo</h3>
+              <p class="region-desc">Neurocráneo, viscerocráneo, mandíbula y estructuras faciales. Patologías traumáticas, infecciosas y trepanaciones.</p>
+              <div class="region-stats">
+                <span>86 piezas</span>
+                <span>·</span>
+                <span>12 patologías</span>
+              </div>
+              <a href="#" class="region-link">Explorar región →</a>
+            </article>
+
+            <article class="region-card" data-region="tronco">
+              <div class="region-card-header">
+                <div class="region-dot region-dot--green"></div>
+                <span class="region-code">R.02</span>
+              </div>
+              <h3 class="region-title">Tronco</h3>
+              <p class="region-desc">Columna vertebral, costillas, esternón y pelvis. Patologías degenerativas, infecciosas y traumáticas de alta prevalencia.</p>
+              <div class="region-stats">
+                <span>124 piezas</span>
+                <span>·</span>
+                <span>18 patologías</span>
+              </div>
+              <a href="#" class="region-link">Explorar región →</a>
+            </article>
+
+            <article class="region-card" data-region="sup">
+              <div class="region-card-header">
+                <div class="region-dot region-dot--mostaza"></div>
+                <span class="region-code">R.03</span>
+              </div>
+              <h3 class="region-title">Miembros superiores</h3>
+              <p class="region-desc">Húmero, radio, cúbito, carpo y mano. Fracturas consolidadas, patologías degenerativas y marcadores de actividad.</p>
+              <div class="region-stats">
+                <span>72 piezas</span>
+                <span>·</span>
+                <span>9 patologías</span>
+              </div>
+              <a href="#" class="region-link">Explorar región →</a>
+            </article>
+
+            <article class="region-card" data-region="inf">
+              <div class="region-card-header">
+                <div class="region-dot region-dot--coral"></div>
+                <span class="region-code">R.04</span>
+              </div>
+              <h3 class="region-title">Miembros inferiores</h3>
+              <p class="region-desc">Fémur, tibia, peroné, tarso y pie. Patologías metabólicas, traumáticas y marcadores de movilidad y estrés biomecánico.</p>
+              <div class="region-stats">
+                <span>64 piezas</span>
+                <span>·</span>
+                <span>11 patologías</span>
+              </div>
+              <a href="#" class="region-link">Explorar región →</a>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPLORACIÓN PATOLÓGICA
+    ============================================================ -->
+    <section class="patologica-section" id="patologica">
+      <div class="patologica-inner">
+        <div class="patologica-header">
+          <span class="section-tag">Módulo 02</span>
+          <h2 class="section-title">Exploración patológica</h2>
+          <p class="section-desc">Clasificación sistemática de las patologías óseas documentadas en la colección. Cada categoría reúne casos registrados con criterios diagnósticos y contexto bioarqueológico.</p>
+        </div>
+
+        <div class="patologias-grid">
+
+          <article class="pato-card pato-card--traumatica">
+            <div class="pato-num">01</div>
+            <div class="pato-accent"></div>
+            <h3 class="pato-title">Traumáticas</h3>
+            <p class="pato-desc">Fracturas, luxaciones y lesiones perimortem o antemortem. Indicadores de violencia interpersonal y accidentes.</p>
+            <div class="pato-footer">
+              <span class="pato-count">34 casos</span>
+              <a href="#" class="pato-link">Ver →</a>
+            </div>
+          </article>
+
+          <article class="pato-card pato-card--infecciosa">
+            <div class="pato-num">02</div>
+            <div class="pato-accent"></div>
+            <h3 class="pato-title">Infecciosas</h3>
+            <p class="pato-desc">Osteomielitis, tuberculosis, brucelosis y otras enfermedades infecciosas con expresión ósea documentable.</p>
+            <div class="pato-footer">
+              <span class="pato-count">28 casos</span>
+              <a href="#" class="pato-link">Ver →</a>
+            </div>
+          </article>
+
+          <article class="pato-card pato-card--degenerativa">
+            <div class="pato-num">03</div>
+            <div class="pato-accent"></div>
+            <h3 class="pato-title">Degenerativas</h3>
+            <p class="pato-desc">Artrosis, espondiloartrosis y cambios óseos asociados al desgaste articular y al envejecimiento del individuo.</p>
+            <div class="pato-footer">
+              <span class="pato-count">61 casos</span>
+              <a href="#" class="pato-link">Ver →</a>
+            </div>
+          </article>
+
+          <article class="pato-card pato-card--metabolica">
+            <div class="pato-num">04</div>
+            <div class="pato-accent"></div>
+            <h3 class="pato-title">Metabólicas</h3>
+            <p class="pato-desc">Hiperostosis porótica, criba orbitalia, escorbuto y raquitismo. Indicadores de déficits nutricionales y estrés fisiológico.</p>
+            <div class="pato-footer">
+              <span class="pato-count">43 casos</span>
+              <a href="#" class="pato-link">Ver →</a>
+            </div>
+          </article>
+
+          <article class="pato-card pato-card--neoplasica">
+            <div class="pato-num">05</div>
+            <div class="pato-accent"></div>
+            <h3 class="pato-title">Neoplásicas</h3>
+            <p class="pato-desc">Tumores óseos primarios y metastásicos. Presencia de osteomas, lesiones líticas y otras neoplasias con registro esquelético.</p>
+            <div class="pato-footer">
+              <span class="pato-count">12 casos</span>
+              <a href="#" class="pato-link">Ver →</a>
+            </div>
+          </article>
+
+          <article class="pato-card pato-card--dental">
+            <div class="pato-num">06</div>
+            <div class="pato-accent"></div>
+            <h3 class="pato-title">Dentales y congénitas</h3>
+            <p class="pato-desc">Caries, periodontitis, anomalías de desarrollo y alteraciones congénitas en el esqueleto axial y apendicular.</p>
+            <div class="pato-footer">
+              <span class="pato-count">57 casos</span>
+              <a href="#" class="pato-link">Ver →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COLECCIÓN
+    ============================================================ -->
+    <section class="coleccion-section" id="coleccion">
+      <div class="coleccion-inner">
+
+        <div class="coleccion-editorial">
+          <div class="coleccion-text">
+            <span class="section-tag section-tag--light">Módulo 03</span>
+            <h2 class="section-title">La Colección</h2>
+            <p class="coleccion-lead">
+              El Departamento de Antropología Física de la Universidad Autónoma de Madrid custodia una de las colecciones osteológicas de referencia en el ámbito académico español.
+            </p>
+            <p class="coleccion-body">
+              Esta colección reúne piezas procedentes de excavaciones arqueológicas, fondos históricos y material de estudio comparativo, con especial atención a los contextos medievales e hispanoamericanos. Su valor científico reside tanto en la excepcionalidad de algunas piezas como en la representatividad estadística del conjunto, que permite estudios poblacionales, análisis de paleodieta y reconstrucción de condiciones de vida pasadas.
+            </p>
+            <div class="coleccion-cifras">
+              <div class="cifra">
+                <span class="cifra-num">+340</span>
+                <span class="cifra-label">Piezas documentadas</span>
+              </div>
+              <div class="cifra">
+                <span class="cifra-num">6</span>
+                <span class="cifra-label">Contextos arqueológicos</span>
+              </div>
+              <div class="cifra">
+                <span class="cifra-num">XII–XIX</span>
+                <span class="cifra-label">Siglos representados</span>
+              </div>
+            </div>
+            <a href="#" class="btn btn--primary">Acceder al catálogo</a>
+          </div>
+
+          <div class="coleccion-panel">
+            <div class="coleccion-panel-inner">
+              <div class="panel-label">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 9h6M9 6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                Próximamente
+              </div>
+              <div class="panel-3d">
+                <div class="panel-3d-icon">
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 6L58 20v24L32 58 6 44V20L32 6z" stroke="var(--color-blue-medium)" stroke-width="1.5" fill="none"/>
+                    <path d="M32 6v52M6 20l26 14 26-14" stroke="var(--color-blue-medium)" stroke-width="1" opacity="0.5"/>
+                    <circle cx="32" cy="32" r="8" fill="none" stroke="var(--color-mostaza)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  </svg>
+                </div>
+                <p class="panel-3d-text">Integración de modelos 3D interactivos y fichas de catalogación científica</p>
+              </div>
+              <div class="panel-features">
+                <div class="panel-feat">
+                  <span class="feat-dot"></span>
+                  Fichas osteológicas completas
+                </div>
+                <div class="panel-feat">
+                  <span class="feat-dot"></span>
+                  Modelos tridimensionales
+                </div>
+                <div class="panel-feat">
+                  <span class="feat-dot"></span>
+                  Documentación fotográfica
+                </div>
+                <div class="panel-feat">
+                  <span class="feat-dot"></span>
+                  Datos biométricos y contextuales
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         AULA VIRTUAL
+    ============================================================ -->
+    <section class="aula-section" id="aula">
+      <div class="aula-inner">
+        <div class="aula-header">
+          <span class="section-tag">Módulo 04</span>
+          <h2 class="section-title">Aula virtual</h2>
+          <p class="section-desc">Espacio educativo integrado en el museo. Conceptos, recursos y materiales para el aprendizaje de la paleopatología y la osteología desde una perspectiva académica.</p>
+        </div>
+
+        <div class="aula-grid">
+
+          <article class="aula-card">
+            <div class="aula-card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 22L14 4l10 18H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="9" y1="16" x2="19" y2="16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/></svg>
+            </div>
+            <h3 class="aula-card-title">Conceptos básicos</h3>
+            <p class="aula-card-desc">Introducción a la paleopatología, metodología de análisis esquelético y principales conceptos de osteología forense y arqueológica.</p>
+            <a href="#" class="aula-card-link">Ir al módulo →</a>
+          </article>
+
+          <article class="aula-card">
+            <div class="aula-card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="5" width="22" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><line x1="3" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.3"/><path d="M9 16l3 3 6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="aula-card-title">Anatomía ósea</h3>
+            <p class="aula-card-desc">Atlas digital del esqueleto humano con denominación anatómica, variaciones morfológicas y referencias bibliográficas actualizadas.</p>
+            <a href="#" class="aula-card-link">Ir al módulo →</a>
+          </article>
+
+          <article class="aula-card">
+            <div class="aula-card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3v8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3 class="aula-card-title">Recursos didácticos</h3>
+            <p class="aula-card-desc">Materiales descargables, presentaciones, fichas de trabajo y guías de práctica para el análisis de material osteológico.</p>
+            <a href="#" class="aula-card-link">Ir al módulo →</a>
+          </article>
+
+          <article class="aula-card">
+            <div class="aula-card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 7h18M5 12h14M5 17h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="aula-card-title">Bibliografía</h3>
+            <p class="aula-card-desc">Compilación de referencias esenciales en paleopatología, bioarqueología y osteología humana, con acceso a textos digitalizados cuando sea posible.</p>
+            <a href="#" class="aula-card-link">Ir al módulo →</a>
+          </article>
+
+          <article class="aula-card aula-card--future">
+            <div class="aula-card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 3"/><path d="M10 14l3 3 5-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/></svg>
+            </div>
+            <div class="aula-future-badge">Próximamente</div>
+            <h3 class="aula-card-title">Cuestionarios y juegos</h3>
+            <p class="aula-card-desc">Actividades interactivas para evaluar y consolidar el aprendizaje de diagnóstico diferencial y reconocimiento de patologías.</p>
+            <a href="#" class="aula-card-link aula-card-link--disabled">En desarrollo →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ACTUALIDAD
+    ============================================================ -->
+    <section class="actualidad-section" id="actualidad">
+      <div class="actualidad-inner">
+        <div class="actualidad-header">
+          <div class="actualidad-header-left">
+            <span class="section-tag section-tag--light">Módulo 05</span>
+            <h2 class="section-title">Actualidad</h2>
+          </div>
+          <a href="#" class="btn btn--outline btn--sm">Ver todas las noticias</a>
+        </div>
+
+        <div class="noticias-grid">
+
+          <article class="noticia-card noticia-card--featured">
+            <div class="noticia-meta">
+              <span class="noticia-cat noticia-cat--investigacion">Investigación</span>
+              <time class="noticia-date">14 abr. 2025</time>
+            </div>
+            <h3 class="noticia-title">Nuevos hallazgos en la necrópolis medieval de Santa María la Real: diagnóstico diferencial de tuberculosis ósea en contexto urbano bajomedieval</h3>
+            <p class="noticia-excerpt">El equipo del Departamento de Antropología Física de la UAM presenta los resultados del análisis paleopatológico de los restos documentados durante las campañas de 2023–2024.</p>
+            <a href="#" class="noticia-link">Leer más →</a>
+          </article>
+
+          <article class="noticia-card">
+            <div class="noticia-meta">
+              <span class="noticia-cat noticia-cat--proyecto">Proyecto</span>
+              <time class="noticia-date">2 mar. 2025</time>
+            </div>
+            <h3 class="noticia-title">El Museo Virtual de Paleopatología amplía su colección con nuevas piezas digitalizadas en 3D</h3>
+            <p class="noticia-excerpt">Incorporación de modelos fotogramétricos de alta resolución de piezas con patologías infecciosas y degenerativas.</p>
+            <a href="#" class="noticia-link">Leer más →</a>
+          </article>
+
+          <article class="noticia-card">
+            <div class="noticia-meta">
+              <span class="noticia-cat noticia-cat--evento">Evento</span>
+              <time class="noticia-date">18 feb. 2025</time>
+            </div>
+            <h3 class="noticia-title">Jornadas de Bioarqueología UAM: acceso abierto a las ponencias y materiales del simposio</h3>
+            <p class="noticia-excerpt">Disponibles en el Aula Virtual los vídeos y materiales de las jornadas celebradas en la Facultad de Filosofía y Letras.</p>
+            <a href="#" class="noticia-link">Leer más →</a>
+          </article>
+
+          <article class="noticia-card">
+            <div class="noticia-meta">
+              <span class="noticia-cat noticia-cat--publicacion">Publicación</span>
+              <time class="noticia-date">5 ene. 2025</time>
+            </div>
+            <h3 class="noticia-title">Nueva guía de diagnóstico diferencial en paleopatología: publicación de acceso abierto disponible en el repositorio UAM</h3>
+            <p class="noticia-excerpt">Descarga disponible en el módulo de Bibliografía del Aula Virtual. Autoría del grupo de investigación de Bioarqueología UAM.</p>
+            <a href="#" class="noticia-link">Leer más →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <div class="footer-logo-mark">UAM</div>
+          <div class="footer-logo-text">
+            <span class="footer-project">Museo Virtual de Paleopatología</span>
+            <span class="footer-inst">Universidad Autónoma de Madrid</span>
+          </div>
+        </div>
+        <p class="footer-desc">Plataforma académica de divulgación y estudio de patologías óseas en contextos históricos y arqueológicos. Departamento de Antropología Física, UAM.</p>
+        <p class="footer-proto">⚠ Prototipo educativo — Proyecto de Trabajo Fin de Grado</p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="footer-col-title">Módulos</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#anatomica">Exploración anatómica</a></li>
+          <li><a href="#patologica">Exploración patológica</a></li>
+          <li><a href="#coleccion">Colección</a></li>
+          <li><a href="#aula">Aula virtual</a></li>
+          <li><a href="#actualidad">Actualidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-info-col">
+        <h4 class="footer-col-title">Información</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#">Sobre el proyecto</a></li>
+          <li><a href="#">Metodología</a></li>
+          <li><a href="#">Equipo</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Repositorio UAM</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Museo Virtual de Paleopatología · Universidad Autónoma de Madrid · Facultad de Filosofía y Letras</span>
+      <span>Proyecto académico sin fines comerciales</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
