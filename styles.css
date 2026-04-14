@@ -350,267 +350,243 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ─────────────────────────────────────────
-   5. HERO
+   5. HERO MÓDULOS - N
    ───────────────────────────────────────── */
-.hero {
+/* ─────────────────────────────────────────
+   HERO MÓDULOS — NEOBRUTALISTA
+   ───────────────────────────────────────── */
+
+/* Variables de color por módulo */
+:root {
+  --anat-bg:       #E8521A;
+  --anat-hover:    #FF8C5A;
+  --anat-border:   #1a1a1a;
+
+  --pato-bg:       #C4973A;
+  --pato-hover:    #F0C96A;
+  --pato-border:   #1a1a1a;
+
+  --aula-bg:       #2B7ABF;
+  --aula-hover:    #72B3F0;
+  --aula-border:   #1a1a1a;
+
+  --actu-bg:       #2E9E58;
+  --actu-hover:    #72D496;
+  --actu-border:   #1a1a1a;
+}
+
+.hero-modulos {
+  background: #F5F0E8;
+  padding: calc(68px + 2rem) var(--gutter) var(--space-xl);
   min-height: 100vh;
-  background: var(--color-bg-dark);
-  padding-top: 68px;
-  position: relative;
-  overflow: hidden;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
-/* Background texture */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 75% 40%, rgba(28, 93, 145, 0.35) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 30% at 20% 70%, rgba(74, 119, 41, 0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-/* Dot grid overlay */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(255,253,1,0.08) 1px, transparent 1px);
-  background-size: 36px 36px;
-  pointer-events: none;
-}
-
-.hero-grid {
-  flex: 1;
+.hero-modulos-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--space-xxl) var(--gutter);
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: var(--space-xl);
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-/* Hero content */
-.hero-content {
-  max-width: 640px;
-}
-
-.hero-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: var(--space-lg);
-}
-
-.label-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-green-vivo);
-  animation: pulse 2.2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.4); }
-}
-
-.hero-title {
-  font-family: var(--font-title);
-  font-weight: 800;
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  margin-bottom: var(--space-md);
-  overflow: hidden;
-}
-
-.hero-title-line {
-  display: block;
-  color: var(--color-text-light);
-}
-
-.hero-title-line--1 { font-size: clamp(3.5rem, 7vw, 6.5rem); }
-.hero-title-line--2 { font-size: clamp(2.5rem, 5vw, 4.5rem); opacity: 0.75; }
-.hero-title-line--3 { font-size: clamp(1.8rem, 3.5vw, 3rem); opacity: 0.55; }
-
-.title-accent {
-  color: var(--color-accent-yellow);
-  opacity: 1;
-}
-
-.hero-sub {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.6);
-  max-width: 52ch;
-  line-height: 1.75;
-  margin-bottom: var(--space-lg);
-}
-
-.hero-ctas {
-  display: flex;
+  grid-template-columns: 1fr 1fr 360px;
   gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: var(--space-xl);
+  align-items: stretch;
 }
 
-/* Override btn colors for dark hero */
-.hero-ctas .btn--primary {
-  background: var(--color-accent-yellow);
-  color: var(--color-bg-dark);
-  border-color: var(--color-accent-yellow);
+/* ── Tarjeta base ── */
+.hmod-card {
+  border-radius: 4px;
+  border: 3px solid #1a1a1a;
+  box-shadow: 6px 6px 0px #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
 }
-.hero-ctas .btn--primary:hover {
-  background: #fff;
-  border-color: #fff;
-  box-shadow: 0 8px 24px rgba(255,253,1,0.25);
+.hmod-card:hover {
+  box-shadow: 10px 10px 0px #1a1a1a;
+  transform: translate(-2px, -2px);
 }
-.hero-ctas .btn--primary::after { background: var(--color-blue-dark); }
 
-.hero-ctas .btn--outline {
-  border-color: rgba(255,255,255,0.3);
-  color: rgba(255,255,255,0.85);
+/* Colores de fondo por módulo */
+.hmod-card--anatomica  { background: var(--anat-bg); }
+.hmod-card--patologica { background: var(--pato-bg); }
+.hmod-card--aula       { background: var(--aula-bg); }
+.hmod-card--actualidad { background: var(--actu-bg); }
+
+/* ── Imagen ── */
+.hmod-img-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-bottom: 3px solid #1a1a1a;
+  flex-shrink: 0;
 }
-.hero-ctas .btn--outline:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.6);
+.hmod-img-wrap--sm {
+  height: 130px;
+}
+.hmod-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.hmod-card:hover .hmod-img {
+  transform: scale(1.04);
+}
+
+/* ── Cuerpo de texto ── */
+.hmod-body {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+/* ── Títulos ── */
+.hmod-title-link {
+  display: block;
   color: #fff;
 }
 
-.hero-meta {
-  display: flex;
-  gap: var(--space-lg);
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: var(--space-md);
-}
-
-.hero-stat {}
-
-.stat-num {
-  display: block;
+.hmod-title {
   font-family: var(--font-title);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--color-accent-yellow);
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff;
+  transition: color 0.18s ease;
+}
+.hmod-title-link:hover .hmod-title {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 3px;
+}
+
+.hmod-card--anatomica  .hmod-title-link:hover .hmod-title { color: var(--anat-hover); }
+.hmod-card--patologica .hmod-title-link:hover .hmod-title { color: var(--pato-hover); }
+
+.hmod-title-sm {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  font-weight: 800;
   line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  transition: color 0.18s ease;
+}
+.hmod-title-link:hover .hmod-title-sm {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+.hmod-card--aula       .hmod-title-link:hover .hmod-title-sm { color: var(--aula-hover); }
+.hmod-card--actualidad .hmod-title-link:hover .hmod-title-sm { color: var(--actu-hover); }
+
+/* ── Subtítulos ── */
+.hmod-sub {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
+}
+.hmod-sub-sm {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  flex: 1;
 }
 
-.stat-label {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.4);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-/* Hero visual / skeleton */
-.hero-visual {
+/* ── Tags ── */
+.hmod-tags {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.skeleton-diagram {
-  position: relative;
-  width: 320px;
-  height: 520px;
-}
-
-.skeleton-bg-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(28,93,145,0.18) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.skeleton-svg {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 0 40px rgba(28,93,145,0.3));
-}
-
-.hotspot {
-  cursor: pointer;
-  animation: hotspot-pulse 2.5s ease-in-out infinite;
-}
-@keyframes hotspot-pulse {
-  0%, 100% { opacity: 1; r: 5px; }
-  50% { opacity: 0.6; r: 7px; }
-}
-
-/* Skeleton labels */
-.skeleton-label {
-  position: absolute;
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 0.4rem;
-  font-size: 0.7rem;
+}
+
+.hmod-tag {
+  font-size: 0.74rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.7);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  white-space: nowrap;
+  color: #fff;
+  background: rgba(0,0,0,0.2);
+  border: 2px solid rgba(255,255,255,0.5);
+  padding: 0.28rem 0.7rem;
+  border-radius: 3px;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+  letter-spacing: 0.02em;
 }
+.hmod-card--anatomica  .hmod-tag:hover { background: var(--anat-hover); border-color: var(--anat-hover); color: #1a1a1a; }
+.hmod-card--patologica .hmod-tag:hover { background: var(--pato-hover); border-color: var(--pato-hover); color: #1a1a1a; }
 
-.sk-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  flex-shrink: 0;
+/* ── Botón principal ── */
+.hmod-btn {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding: 0.9rem 1.5rem;
+  border-top: 3px solid #1a1a1a;
+  color: #fff;
+  transition: background 0.18s ease, color 0.18s ease;
+  margin-top: auto;
 }
-.sk-dot--yellow  { background: var(--color-accent-yellow); }
-.sk-dot--green   { background: var(--color-green-vivo); }
-.sk-dot--mostaza { background: var(--color-mostaza); }
-.sk-dot--coral   { background: var(--color-coral); }
+.hmod-card--anatomica  .hmod-btn { background: var(--anat-bg); }
+.hmod-card--patologica .hmod-btn { background: var(--pato-bg); }
 
-.sk-label--skull  { top: 6%;  right: -40%; }
-.sk-label--trunk  { top: 32%; right: -46%; }
-.sk-label--upper  { top: 48%; left: -50%; }
-.sk-label--lower  { bottom: 16%; right: -52%; }
+.hmod-card--anatomica  .hmod-btn:hover { background: var(--anat-hover); color: var(--anat-bg); }
+.hmod-card--patologica .hmod-btn:hover { background: var(--pato-hover); color: var(--pato-bg); }
 
-/* Scroll indicator */
-.hero-scroll {
-  position: relative;
-  z-index: 1;
+/* ── Link pequeño ── */
+.hmod-link-sm {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  transition: color 0.18s ease;
+  margin-top: auto;
+}
+.hmod-card--aula       .hmod-link-sm:hover { color: var(--aula-hover); }
+.hmod-card--actualidad .hmod-link-sm:hover { color: var(--actu-hover); }
+
+/* ── Columna pequeña ── */
+.hmod-col-small {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  padding-bottom: var(--space-lg);
-  color: rgba(255,255,255,0.3);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  gap: 1rem;
+}
+.hmod-card--aula,
+.hmod-card--actualidad {
+  flex: 1;
 }
 
-.scroll-line {
-  width: 1px;
-  height: 36px;
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.35));
-  animation: scrollline 1.8s ease-in-out infinite;
-}
-@keyframes scrollline {
-  0% { transform: scaleY(0); transform-origin: top; }
-  50% { transform: scaleY(1); transform-origin: top; }
-  51% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hero-modulos-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hmod-col-small {
+    grid-column: 1 / 3;
+    flex-direction: row;
+  }
 }
 
+@media (max-width: 640px) {
+  .hero-modulos-inner {
+    grid-template-columns: 1fr;
+  }
+  .hmod-col-small {
+    grid-column: 1 / 2;
+    flex-direction: column;
+  }
+  .hmod-img-wrap { height: 180px; }
+  .hmod-img-wrap--sm { height: 110px; }
+}
 /* ─────────────────────────────────────────
    6. MÓDULOS
    ───────────────────────────────────────── */
