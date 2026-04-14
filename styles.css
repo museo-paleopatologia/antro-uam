@@ -417,40 +417,32 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hmod-card--actualidad { background: var(--actu-bg); }
 
 /* ── Imagen ── */
-.hmod-img-wrap {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  border-bottom: 3px solid #1a1a1a;
-  flex-shrink: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 0 1rem;
-  position: absolute;
-  bottom: 80px;
-  right: 0;
-  pointer-events: none;
-  opacity: 0,35;
+.hmod-card--anatomica {
+  background-image: url('../assets/img/exploración_anatómica.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 55%;
+}
 
+.hmod-card--patologica {
+  background-image: url('../assets/img/exploración_patológica.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 50%;
 }
-.hmod-img-wrap--sm {
-  height: 120px;
-  bottom: 60px;
-  opacity: 0,3;
-  padding: 0.75rem 0.75rem 0;
+
+.hmod-card--aula {
+  background-image: url('../assets/img/aula_virtual.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 40%;
 }
-.hmod-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: bottom;
-  display: block;
-  mix-blend-mode: multiply;
-  transition: transform 0.4s ease;
-}
-.hmod-card:hover .hmod-img {
-  transform: scale(1.05) translateY(-4px);
+
+.hmod-card--actualidad {
+  background-image: url('../assets/img/actualidad.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 40%;
 }
 
 /* ── Cuerpo de texto ── */
