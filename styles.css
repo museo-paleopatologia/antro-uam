@@ -6,26 +6,23 @@
 /* ── CSS CUSTOM PROPERTIES ── */
 :root {
   /* Palette */
-  --cream:        #f7f3eb;
-  --cream-dark:   #efe6d6;
-  --parchment:    #fac068;
+  --cream:        #f7f1e4;
+  --cream-dark:   #efe4cf;
+  --parchment:    #e6d3a3;
 
-  --ink:          #2a1f22;
-  --ink-soft:     #4a3a3d;
-  --ink-muted:    #7a6a6d;
+  --ink:          #2b2230;
+  --ink-soft:     #4b404f;
+  --ink-muted:    #75697a;
 
   --green:        #4a7729;
   --green-light:  #2da641;
-  --green-pale:   #d7e7cf;
+  --green-pale:   #dce8cf;
 
   --blue-dark:    #1c5d91;
   --blue-mid:     #0077c8;
 
-  --gold:         #f6c35b;
-  --gold-light:   #fffd01;
-
-  --accent-coral: #f6513b;
-  --accent-wine:  #8f243c;
+  --gold:         #fac068;
+  --gold-light:   #f6dd3f;
 
   --white:        #ffffff;
 }
@@ -65,8 +62,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: hotpink !important;
-  color: black;
+  background-color: var(--cream);
+  color: var(.--ink);
   line-height: 1.7;
   overflow-x: hidden;
 }
