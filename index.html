@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Museo Virtual de Paleopatología</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Google Fonts: Cormorant Garamond (serif/display) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -27,7 +26,8 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#inicio" class="nav-link active">Inicio</a></li>
         <li><a href="#anatomia" class="nav-link">Exploración anatómica</a></li>
-        <li><a href="#patologias" class="nav-link">Patologías</a></li>
+        <li><a href="#exploracion-patologica" class="nav-link">Exploración patológica</a></li>
+        <li><a href="#coleccion" class="nav-link">Colección</a></li>
         <li><a href="#aula" class="nav-link">Aula virtual</a></li>
         <li><a href="#actualidad" class="nav-link">Actualidad</a></li>
       </ul>
@@ -38,35 +38,31 @@
        HERO SECTION
   ============================================= -->
   <section class="hero" id="inicio">
-    <!-- Decorative background texture overlay -->
     <div class="hero-texture"></div>
     <div class="hero-grid-lines"></div>
 
     <div class="hero-content">
-      <p class="hero-label">Colección permanente · Acceso abierto</p>
+      <p class="hero-label">Departamento de Antropología UAM · Acceso abierto</p>
       <h1 class="hero-title">
         Museo Virtual<br />
         <em>de Paleopatología</em>
       </h1>
       <p class="hero-subtitle">
-        Una plataforma académica dedicada al estudio de las enfermedades en restos óseos humanos del pasado. Explora colecciones, patologías documentadas y recursos educativos de libre acceso.
+        Un espacio digital para explorar la colección paleopatológica del Departamento de Antropología de la Universidad Autónoma de Madrid mediante navegación anatómica, exploración por patologías y recursos educativos.
       </p>
       <div class="hero-actions">
-        <a href="#anatomia" class="btn btn-primary">Explorar el museo</a>
-        <a href="#coleccion" class="btn btn-ghost">Ver colección destacada</a>
+        <a href="#anatomia" class="btn btn-primary">Explorar anatómicamente</a>
+        <a href="#coleccion" class="btn btn-ghost">Conocer la colección</a>
       </div>
     </div>
 
-    <!-- Hero decorative skeleton illustration (SVG placeholder) -->
     <div class="hero-visual">
       <div class="skeleton-frame">
         <svg viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg" class="skeleton-svg">
-          <!-- Skull -->
           <ellipse cx="100" cy="38" rx="28" ry="32" fill="none" stroke="currentColor" stroke-width="1.5"/>
           <ellipse cx="100" cy="52" rx="18" ry="12" fill="none" stroke="currentColor" stroke-width="1"/>
           <line x1="88" y1="45" x2="82" y2="45" stroke="currentColor" stroke-width="1.5"/>
           <line x1="112" y1="45" x2="118" y2="45" stroke="currentColor" stroke-width="1.5"/>
-          <!-- Spine -->
           <line x1="100" y1="70" x2="100" y2="200" stroke="currentColor" stroke-width="1.5"/>
           <rect x="93" y="76" width="14" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1"/>
           <rect x="93" y="90" width="14" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1"/>
@@ -75,40 +71,32 @@
           <rect x="93" y="132" width="14" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1"/>
           <rect x="93" y="146" width="14" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1"/>
           <rect x="93" y="160" width="14" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1"/>
-          <!-- Ribcage -->
           <path d="M100 80 Q70 90 65 110 Q68 120 100 118" fill="none" stroke="currentColor" stroke-width="1"/>
           <path d="M100 86 Q68 96 63 116 Q66 126 100 124" fill="none" stroke="currentColor" stroke-width="1"/>
           <path d="M100 92 Q68 104 64 122 Q68 132 100 130" fill="none" stroke="currentColor" stroke-width="1"/>
           <path d="M100 80 Q130 90 135 110 Q132 120 100 118" fill="none" stroke="currentColor" stroke-width="1"/>
           <path d="M100 86 Q132 96 137 116 Q134 126 100 124" fill="none" stroke="currentColor" stroke-width="1"/>
           <path d="M100 92 Q132 104 136 122 Q132 132 100 130" fill="none" stroke="currentColor" stroke-width="1"/>
-          <!-- Pelvis -->
           <path d="M75 170 Q60 182 65 198 Q80 210 100 208 Q120 210 135 198 Q140 182 125 170 Q115 178 100 176 Q85 178 75 170Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <!-- Left arm -->
           <line x1="72" y1="75" x2="55" y2="140" stroke="currentColor" stroke-width="1.5"/>
           <line x1="55" y1="140" x2="42" y2="200" stroke="currentColor" stroke-width="1.5"/>
           <line x1="42" y1="200" x2="35" y2="240" stroke="currentColor" stroke-width="1"/>
           <line x1="42" y1="200" x2="44" y2="238" stroke="currentColor" stroke-width="1"/>
-          <!-- Right arm -->
           <line x1="128" y1="75" x2="145" y2="140" stroke="currentColor" stroke-width="1.5"/>
           <line x1="145" y1="140" x2="158" y2="200" stroke="currentColor" stroke-width="1.5"/>
           <line x1="158" y1="200" x2="165" y2="240" stroke="currentColor" stroke-width="1"/>
           <line x1="158" y1="200" x2="156" y2="238" stroke="currentColor" stroke-width="1"/>
-          <!-- Left leg -->
           <line x1="88" y1="208" x2="82" y2="290" stroke="currentColor" stroke-width="1.5"/>
           <line x1="82" y1="290" x2="80" y2="370" stroke="currentColor" stroke-width="1.5"/>
-          <!-- Right leg -->
           <line x1="112" y1="208" x2="118" y2="290" stroke="currentColor" stroke-width="1.5"/>
           <line x1="118" y1="290" x2="120" y2="370" stroke="currentColor" stroke-width="1.5"/>
-          <!-- Knee joints -->
           <circle cx="82" cy="290" r="5" fill="none" stroke="currentColor" stroke-width="1"/>
           <circle cx="118" cy="290" r="5" fill="none" stroke="currentColor" stroke-width="1"/>
         </svg>
-        <div class="skeleton-label">Homo sapiens · s. XII–XIV d.C.</div>
+        <div class="skeleton-label">Acceso inicial al museo por regiones anatómicas</div>
       </div>
     </div>
 
-    <!-- Scroll indicator -->
     <div class="scroll-indicator">
       <span>Desplaza para explorar</span>
       <div class="scroll-line"></div>
@@ -116,28 +104,28 @@
   </section>
 
   <!-- =============================================
-       STATS BAR
+       ACCESOS PRINCIPALES
   ============================================= -->
   <section class="stats-bar">
     <div class="stats-container">
       <div class="stat-item">
-        <span class="stat-number">340+</span>
-        <span class="stat-label">Piezas catalogadas</span>
+        <span class="stat-number">01</span>
+        <span class="stat-label">Exploración anatómica</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-number">5</span>
-        <span class="stat-label">Categorías patológicas</span>
+        <span class="stat-number">02</span>
+        <span class="stat-label">Exploración patológica</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-number">12</span>
-        <span class="stat-label">Yacimientos representados</span>
+        <span class="stat-number">03</span>
+        <span class="stat-label">Colección UAM</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-number">Libre</span>
-        <span class="stat-label">Acceso académico</span>
+        <span class="stat-number">04</span>
+        <span class="stat-label">Aula virtual</span>
       </div>
     </div>
   </section>
@@ -150,11 +138,12 @@
       <div class="section-header">
         <span class="section-tag">01 / Exploración anatómica</span>
         <h2 class="section-title">Navega por regiones<br /><em>del esqueleto humano</em></h2>
-        <p class="section-desc">Selecciona una región anatómica para explorar las patologías documentadas, piezas en colección y hallazgos arqueológicos asociados.</p>
+        <p class="section-desc">
+          La entrada principal del museo se organiza de forma visual y accesible. Cada región anatómica conduce a los huesos disponibles en la colección y, desde ellos, a sus fichas individuales con modelo 3D, imagen 2D anotada y comparación sano vs. enfermo.
+        </p>
       </div>
 
       <div class="anatomy-layout">
-        <!-- Skeleton body diagram (central visual) -->
         <div class="anatomy-body">
           <div class="body-diagram">
             <div class="body-region" data-region="craneo" id="btn-craneo">
@@ -173,7 +162,7 @@
               <div class="region-dot region-legs"></div>
               <span class="region-label region-label-right">Miembros<br/>inferiores</span>
             </div>
-            <!-- Decorative full body illustration -->
+
             <svg viewBox="0 0 160 320" xmlns="http://www.w3.org/2000/svg" class="body-svg">
               <ellipse cx="80" cy="30" rx="22" ry="25" class="region-shape" data-region="craneo"/>
               <rect x="60" y="60" width="40" height="80" rx="6" class="region-shape" data-region="tronco"/>
@@ -186,43 +175,45 @@
           </div>
         </div>
 
-        <!-- Region cards -->
         <div class="anatomy-cards">
           <a href="#" class="anatomy-card" data-region="craneo">
             <div class="anatomy-card-icon">◈</div>
             <div class="anatomy-card-body">
               <h3>Cráneo</h3>
-              <p>Lesiones craneales, trepanaciones, traumatismos perimortem y enfermedades del desarrollo.</p>
-              <span class="card-link">Ver colección →</span>
+              <p>Trepanaciones, lesiones craneales, patologías dentales y alteraciones del desarrollo.</p>
+              <span class="card-link">Entrar en la región →</span>
             </div>
-            <span class="anatomy-card-count">84 piezas</span>
+            <span class="anatomy-card-count">Colección</span>
           </a>
+
           <a href="#" class="anatomy-card" data-region="tronco">
             <div class="anatomy-card-icon">◈</div>
             <div class="anatomy-card-body">
               <h3>Tronco</h3>
-              <p>Columna vertebral, costillas y esternón: patologías degenerativas e infecciosas documentadas.</p>
-              <span class="card-link">Ver colección →</span>
+              <p>Columna, costillas y esternón con lesiones degenerativas, infecciosas y traumáticas.</p>
+              <span class="card-link">Entrar en la región →</span>
             </div>
-            <span class="anatomy-card-count">102 piezas</span>
+            <span class="anatomy-card-count">Colección</span>
           </a>
+
           <a href="#" class="anatomy-card" data-region="superiores">
             <div class="anatomy-card-icon">◈</div>
             <div class="anatomy-card-body">
               <h3>Miembros superiores</h3>
               <p>Húmero, radio, cúbito y mano: fracturas, infecciones óseas y marcadores de actividad.</p>
-              <span class="card-link">Ver colección →</span>
+              <span class="card-link">Entrar en la región →</span>
             </div>
-            <span class="anatomy-card-count">76 piezas</span>
+            <span class="anatomy-card-count">Colección</span>
           </a>
+
           <a href="#" class="anatomy-card" data-region="inferiores">
             <div class="anatomy-card-icon">◈</div>
             <div class="anatomy-card-body">
               <h3>Miembros inferiores</h3>
-              <p>Fémur, tibia, peroné y pie: estrés mecánico, periostitis y osteoartritis en poblaciones antiguas.</p>
-              <span class="card-link">Ver colección →</span>
+              <p>Fémur, tibia, peroné y pie: estrés mecánico, periostitis y patologías articulares.</p>
+              <span class="card-link">Entrar en la región →</span>
             </div>
-            <span class="anatomy-card-count">78 piezas</span>
+            <span class="anatomy-card-count">Colección</span>
           </a>
         </div>
       </div>
@@ -230,27 +221,28 @@
   </section>
 
   <!-- =============================================
-       PATOLOGÍAS
+       EXPLORACIÓN PATOLÓGICA
   ============================================= -->
-  <section class="section section-pathologies" id="patologias">
+  <section class="section section-pathologies" id="exploracion-patologica">
     <div class="container">
       <div class="section-header section-header-light">
-        <span class="section-tag">02 / Patologías</span>
-        <h2 class="section-title">Exploración<br /><em>por categoría patológica</em></h2>
-        <p class="section-desc">Las patologías identificadas en restos óseos se clasifican en cinco grandes grupos. Cada categoría recoge evidencias materiales, criterios diagnósticos y casos documentados.</p>
+        <span class="section-tag">02 / Exploración patológica</span>
+        <h2 class="section-title">Accede a la colección<br /><em>por tipo de patología</em></h2>
+        <p class="section-desc">
+          Además del acceso anatómico, el museo ofrece una segunda vía de entrada más técnica pensada para consulta académica. Las fichas pueden localizarse también según su categoría paleopatológica.
+        </p>
       </div>
 
       <div class="pathology-grid">
-
         <a href="#" class="pathology-card">
           <div class="pathology-card-header">
             <span class="pathology-icon">⌖</span>
             <span class="pathology-num">01</span>
           </div>
-          <h3>Traumatismos<br/><span>& Fracturas</span></h3>
-          <p>Lesiones óseas causadas por fuerzas mecánicas: fracturas antemortem, perimortem y postmortem, luxaciones y contusiones.</p>
+          <h3>Lesiones<br/><span>traumáticas</span></h3>
+          <p>Fracturas, deformaciones, luxaciones y otras lesiones asociadas a traumatismos esqueléticos.</p>
           <div class="pathology-footer">
-            <span class="tag">98 casos</span>
+            <span class="tag">Ruta técnica</span>
             <span class="pathology-arrow">→</span>
           </div>
         </a>
@@ -260,10 +252,10 @@
             <span class="pathology-icon">⌘</span>
             <span class="pathology-num">02</span>
           </div>
-          <h3>Enfermedades<br/><span>Infecciosas</span></h3>
-          <p>Periostitis, osteomielitis, tuberculosis ósea y treponematosis. Marcadores de infección sistémica en el esqueleto.</p>
+          <h3>Enfermedades<br/><span>infecciosas</span></h3>
+          <p>Procesos causados por organismos invasores con manifestación visible en el tejido óseo.</p>
           <div class="pathology-footer">
-            <span class="tag">64 casos</span>
+            <span class="tag">Ruta técnica</span>
             <span class="pathology-arrow">→</span>
           </div>
         </a>
@@ -273,10 +265,10 @@
             <span class="pathology-icon">◎</span>
             <span class="pathology-num">03</span>
           </div>
-          <h3>Neoplasias<br/><span>Óseas</span></h3>
-          <p>Tumores benignos y malignos identificados en restos esqueléticos: osteosarcomas, osteomas y lesiones líticas.</p>
+          <h3>Enfermedades<br/><span>neoplásicas</span></h3>
+          <p>Lesiones óseas compatibles con crecimientos benignos o malignos en poblaciones antiguas.</p>
           <div class="pathology-footer">
-            <span class="tag">27 casos</span>
+            <span class="tag">Ruta técnica</span>
             <span class="pathology-arrow">→</span>
           </div>
         </a>
@@ -286,10 +278,10 @@
             <span class="pathology-icon">⊹</span>
             <span class="pathology-num">04</span>
           </div>
-          <h3>Enfermedades<br/><span>Degenerativas</span></h3>
-          <p>Osteoartritis, espondilosis y otras alteraciones articulares relacionadas con el envejecimiento y la actividad física.</p>
+          <h3>Enfermedades<br/><span>articulares</span></h3>
+          <p>Alteraciones relacionadas con articulaciones y tejidos asociados, como osteoartritis o espondilosis.</p>
           <div class="pathology-footer">
-            <span class="tag">112 casos</span>
+            <span class="tag">Ruta técnica</span>
             <span class="pathology-arrow">→</span>
           </div>
         </a>
@@ -299,103 +291,100 @@
             <span class="pathology-icon">⌑</span>
             <span class="pathology-num">05</span>
           </div>
-          <h3>Congénitas<br/><span>& Deformidades</span></h3>
-          <p>Anomalías del desarrollo óseo, deformidades intencionales del cráneo y alteraciones congénitas identificadas en poblaciones arqueológicas de distintos contextos culturales.</p>
+          <h3>Otras categorías<br/><span>metabólicas, endocrinas y dentales</span></h3>
+          <p>El proyecto contempla también el acceso a patologías metabólicas, endocrinas, dentales y otras alteraciones del desarrollo, integradas en la misma lógica de ficha individual.</p>
           <div class="pathology-footer">
-            <span class="tag">39 casos</span>
+            <span class="tag">Consulta especializada</span>
             <span class="pathology-arrow">→</span>
           </div>
         </a>
-
       </div>
     </div>
   </section>
 
   <!-- =============================================
-       COLECCIÓN DESTACADA / PIEZA DESTACADA
+       COLECCIÓN UAM
   ============================================= -->
   <section class="section section-collection" id="coleccion">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Pieza destacada</span>
-        <h2 class="section-title">Fémur con fractura<br /><em>consolidada — s. XIII</em></h2>
+        <span class="section-tag">03 / Colección</span>
+        <h2 class="section-title">La colección paleopatológica<br /><em>del Departamento de Antropología de la UAM</em></h2>
+        <p class="section-desc">
+          Este apartado presentará la procedencia, relevancia y valor docente de la colección utilizada en el proyecto, así como la importancia de su digitalización para la conservación, la investigación y la divulgación.
+        </p>
       </div>
 
       <div class="artifact-layout">
-
-        <!-- 3D Model placeholder -->
         <div class="artifact-main">
           <div class="model-frame">
             <div class="model-inner">
               <div class="model-icon">⬡</div>
-              <p class="model-label">Modelo 3D interactivo</p>
-              <p class="model-sublabel">Sketchfab · Carga bajo demanda</p>
-              <button class="btn btn-ghost btn-sm" onclick="loadModel(this)">Cargar modelo</button>
+              <p class="model-label">Colección universitaria de referencia</p>
+              <p class="model-sublabel">Departamento de Antropología · UAM</p>
+              <a href="#" class="btn btn-ghost btn-sm">Ver presentación de la colección</a>
             </div>
             <div class="model-corners">
               <span></span><span></span><span></span><span></span>
             </div>
           </div>
 
-          <!-- Artifact metadata -->
           <div class="artifact-meta">
             <div class="meta-item">
-              <span class="meta-key">Registro</span>
-              <span class="meta-val">MVP-2024-FEM-047</span>
+              <span class="meta-key">Institución</span>
+              <span class="meta-val">Universidad Autónoma de Madrid</span>
             </div>
             <div class="meta-item">
-              <span class="meta-key">Cronología</span>
-              <span class="meta-val">Siglo XIII d.C.</span>
+              <span class="meta-key">Departamento</span>
+              <span class="meta-val">Antropología</span>
             </div>
             <div class="meta-item">
-              <span class="meta-key">Yacimiento</span>
-              <span class="meta-val">Necrópolis medieval, Burgos</span>
+              <span class="meta-key">Valor</span>
+              <span class="meta-val">Docente e investigador</span>
             </div>
             <div class="meta-item">
-              <span class="meta-key">Región anatómica</span>
-              <span class="meta-val">Fémur derecho</span>
+              <span class="meta-key">Acceso</span>
+              <span class="meta-val">Digital y divulgativo</span>
             </div>
             <div class="meta-item">
-              <span class="meta-key">Categoría</span>
-              <span class="meta-val">Traumatismo · Fractura</span>
+              <span class="meta-key">Objetivo</span>
+              <span class="meta-val">Conservación y difusión</span>
             </div>
           </div>
         </div>
 
-        <!-- Text + images -->
         <div class="artifact-info">
           <div class="artifact-images">
             <div class="artifact-img-card">
               <div class="img-placeholder img-placeholder-1">
-                <span>Vista anterior</span>
+                <span>Departamento</span>
               </div>
             </div>
             <div class="artifact-img-card">
               <div class="img-placeholder img-placeholder-2">
-                <span>Detalle callosidad</span>
+                <span>Colección</span>
               </div>
             </div>
             <div class="artifact-img-card">
               <div class="img-placeholder img-placeholder-3">
-                <span>Sección transversal</span>
+                <span>Digitalización</span>
               </div>
             </div>
           </div>
 
           <div class="artifact-text">
-            <h3>Descripción científica</h3>
+            <h3>Importancia de la colección</h3>
             <p>
-              El presente fémur derecho pertenece a un individuo adulto masculino (35–45 años estimados) recuperado en posición de inhumación primaria. Presenta una fractura diafisaria oblicua en el tercio medio que muestra signos evidentes de consolidación ósea completa, lo que indica supervivencia prolongada al traumatismo.
+              La colección con paleopatologías empleada en este museo virtual pertenece al Departamento de Antropología de la Universidad Autónoma de Madrid. Su digitalización permite ampliar el acceso académico a materiales que, por motivos de conservación, docencia o gestión, no siempre son fácilmente consultables en formato físico.
             </p>
             <p>
-              La formación de callo óseo es abundante y bien organizado, sugiriendo un proceso de curación sin complicaciones infecciosas secundarias. La ligera angulación residual (≈8°) en el plano frontal podría indicar una inmovilización incompleta o la ausencia de reducción formal de la fractura.
+              Este bloque de la portada servirá para contextualizar la procedencia de los ejemplares, explicar su interés científico y justificar el valor del museo virtual como herramienta para acercar la colección tanto a público general como especializado.
             </p>
             <p class="artifact-ref">
-              <em>Fuente: Colección de referencia osteológica. Estudio paleopatológico preliminar, 2024.</em>
+              <em>Espacio destinado a la presentación institucional, valor patrimonial y función educativa de la colección UAM.</em>
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -406,50 +395,50 @@
   <section class="section section-aula" id="aula">
     <div class="container">
       <div class="section-header section-header-light">
-        <span class="section-tag">03 / Aula virtual</span>
-        <h2 class="section-title">Recursos educativos<br /><em>de libre acceso</em></h2>
-        <p class="section-desc">Materiales didácticos, glosarios y guías metodológicas para estudiantes e investigadores de paleopatología y arqueología biológica.</p>
+        <span class="section-tag">04 / Aula virtual</span>
+        <h2 class="section-title">Recursos educativos<br /><em>y enciclopedia digital</em></h2>
+        <p class="section-desc">
+          Un espacio para materiales didácticos, glosarios, contenidos introductorios sobre paleopatología y recursos interactivos para distintos niveles.
+        </p>
       </div>
 
       <div class="aula-grid">
-
         <a href="#" class="aula-card aula-card-featured">
           <div class="aula-card-tag">Fundamentos</div>
-          <h3>Conceptos básicos<br/>de paleopatología</h3>
-          <p>Introducción al estudio de la enfermedad en restos esqueléticos: metodología, fuentes, limitaciones y criterios diagnósticos.</p>
+          <h3>Introducción a la paleopatología</h3>
+          <p>Qué es la paleopatología, por qué es importante, qué estudia y cuáles son sus principales limitaciones metodológicas.</p>
           <ul class="aula-list">
-            <li>¿Qué es la paleopatología?</li>
+            <li>Definición y contexto disciplinar</li>
             <li>Tipos de evidencia ósea</li>
             <li>Diagnóstico diferencial</li>
-            <li>Límites del análisis macroscópico</li>
+            <li>Limitaciones del registro paleopatológico</li>
           </ul>
           <span class="aula-link">Acceder al módulo →</span>
         </a>
 
         <a href="#" class="aula-card">
-          <div class="aula-card-tag">Glosario</div>
-          <h3>Terminología médica aplicada</h3>
-          <p>Vocabulario especializado para la descripción y clasificación de patologías en contextos arqueológicos.</p>
-          <span class="aula-count">+240 términos</span>
-          <span class="aula-link">Ver glosario →</span>
+          <div class="aula-card-tag">Enciclopedia</div>
+          <h3>Glosario y anatomía básica</h3>
+          <p>Terminología médica y paleopatológica junto con anexos introductorios de anatomía ósea.</p>
+          <span class="aula-count">Contenido divulgativo</span>
+          <span class="aula-link">Ver contenidos →</span>
         </a>
 
         <a href="#" class="aula-card">
-          <div class="aula-card-tag">Recursos</div>
-          <h3>Recursos didácticos & bibliografía</h3>
-          <p>Fichas descargables, guías de observación, referencias bibliográficas comentadas y enlaces a bases de datos internacionales.</p>
-          <span class="aula-count">18 recursos</span>
+          <div class="aula-card-tag">Comparativa</div>
+          <h3>Sano vs. enfermo</h3>
+          <p>Imágenes 2D comparativas para resaltar rasgos morfológicos, afecciones y zonas de interés del hueso.</p>
+          <span class="aula-count">Imágenes anotadas</span>
           <span class="aula-link">Ver recursos →</span>
         </a>
 
         <a href="#" class="aula-card">
-          <div class="aula-card-tag">Metodología</div>
-          <h3>Protocolos de registro</h3>
-          <p>Estándares internacionales de documentación paleopatológica: fichas individuales, fotografía y catalogación de lesiones.</p>
-          <span class="aula-count">4 protocolos</span>
-          <span class="aula-link">Ver protocolos →</span>
+          <div class="aula-card-tag">Didáctica</div>
+          <h3>Juegos y cuestionarios</h3>
+          <p>Recursos educativos diferenciados por nivel y temática para apoyar la divulgación y la docencia.</p>
+          <span class="aula-count">En desarrollo</span>
+          <span class="aula-link">Explorar →</span>
         </a>
-
       </div>
     </div>
   </section>
@@ -460,48 +449,46 @@
   <section class="section section-news" id="actualidad">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">04 / Actualidad</span>
-        <h2 class="section-title">Últimas noticias<br /><em>& publicaciones</em></h2>
+        <span class="section-tag">05 / Actualidad</span>
+        <h2 class="section-title">Noticias, publicaciones<br /><em>y novedades del proyecto</em></h2>
       </div>
 
       <div class="news-grid">
-
         <article class="news-card news-card-featured">
           <div class="news-img news-img-1">
-            <span class="news-category">Investigación</span>
+            <span class="news-category">Proyecto</span>
           </div>
           <div class="news-body">
-            <time class="news-date">12 de mayo, 2025</time>
-            <h3>Nuevas evidencias de tuberculosis ósea en una necrópolis andalusí del siglo XI</h3>
-            <p>Un equipo de investigación ha identificado marcadores compatibles con espondilitis tuberculosa en tres individuos de un yacimiento malagueño, aportando datos sobre la prevalencia de la enfermedad en al-Ándalus.</p>
+            <time class="news-date">Actualización</time>
+            <h3>Avances en la digitalización y catalogación de piezas</h3>
+            <p>Espacio reservado para informar sobre el progreso del museo, incorporación de nuevos modelos y desarrollo de fichas técnicas.</p>
             <a href="#" class="news-link">Leer más →</a>
           </div>
         </article>
 
         <article class="news-card">
           <div class="news-img news-img-2">
-            <span class="news-category">Congreso</span>
+            <span class="news-category">Docencia</span>
           </div>
           <div class="news-body">
-            <time class="news-date">3 de abril, 2025</time>
-            <h3>XIV Reunión del Grupo Español de Paleopatología</h3>
-            <p>Resumen de las comunicaciones presentadas en el congreso anual, con especial énfasis en nuevos métodos de análisis de imagen aplicados al estudio de lesiones óseas.</p>
+            <time class="news-date">Recursos</time>
+            <h3>Nuevos materiales educativos y comparativas visuales</h3>
+            <p>Actualizaciones sobre glosarios, recursos docentes, imágenes 2D interactivas y contenidos de aula virtual.</p>
             <a href="#" class="news-link">Leer más →</a>
           </div>
         </article>
 
         <article class="news-card">
           <div class="news-img news-img-3">
-            <span class="news-category">Publicación</span>
+            <span class="news-category">Investigación</span>
           </div>
           <div class="news-body">
-            <time class="news-date">18 de febrero, 2025</time>
-            <h3>Publicado nuevo protocolo de registro paleopatológico en acceso abierto</h3>
-            <p>La Asociación Española de Antropología Física ha publicado una guía actualizada para la documentación estandarizada de lesiones en restos esqueléticos arqueológicos.</p>
+            <time class="news-date">Colección UAM</time>
+            <h3>Difusión académica de la colección paleopatológica</h3>
+            <p>Bloque para destacar la relevancia científica del fondo osteológico y su proyección en investigación y divulgación.</p>
             <a href="#" class="news-link">Leer más →</a>
           </div>
         </article>
-
       </div>
     </div>
   </section>
@@ -511,14 +498,13 @@
   ============================================= -->
   <footer class="footer">
     <div class="footer-container">
-
       <div class="footer-brand">
         <div class="footer-logo">
           <span class="logo-icon">⬡</span>
           <span>Museo Virtual de Paleopatología</span>
         </div>
         <p class="footer-desc">
-          Plataforma académica de acceso abierto para el estudio de la paleopatología. Proyecto de fin de grado desarrollado como prototipo digital de museo científico.
+          Proyecto académico centrado en la digitalización, estudio y divulgación de la colección paleopatológica del Departamento de Antropología de la Universidad Autónoma de Madrid.
         </p>
       </div>
 
@@ -526,8 +512,8 @@
         <h4>El museo</h4>
         <ul>
           <li><a href="#anatomia">Exploración anatómica</a></li>
-          <li><a href="#patologias">Patologías</a></li>
-          <li><a href="#coleccion">Colección destacada</a></li>
+          <li><a href="#exploracion-patologica">Exploración patológica</a></li>
+          <li><a href="#coleccion">Colección UAM</a></li>
           <li><a href="#">Sobre el proyecto</a></li>
         </ul>
       </div>
@@ -536,27 +522,26 @@
         <h4>Formación</h4>
         <ul>
           <li><a href="#aula">Aula virtual</a></li>
+          <li><a href="#">Enciclopedia</a></li>
           <li><a href="#">Glosario</a></li>
-          <li><a href="#">Bibliografía</a></li>
-          <li><a href="#">Descargas</a></li>
+          <li><a href="#">Recursos</a></li>
         </ul>
       </div>
 
       <div class="footer-links-group">
         <h4>Institución</h4>
         <ul>
-          <li><a href="#">Universidad [Nombre]</a></li>
-          <li><a href="#">Departamento de Prehistoria</a></li>
+          <li><a href="#">Universidad Autónoma de Madrid</a></li>
+          <li><a href="#">Departamento de Antropología</a></li>
           <li><a href="#">Contacto</a></li>
           <li><a href="#">Aviso legal</a></li>
         </ul>
       </div>
-
     </div>
 
     <div class="footer-bottom">
-      <p>© 2025 · Proyecto académico desarrollado por <strong>Clara</strong> · Trabajo de Fin de Grado · Todos los derechos reservados</p>
-      <p class="footer-note">Este sitio es un prototipo con fines educativos. Las imágenes y datos son de carácter ilustrativo.</p>
+      <p>© 2025 · Proyecto académico desarrollado por <strong>Clara</strong> · Trabajo de Fin de Grado</p>
+      <p class="footer-note">Sitio en desarrollo con fines docentes, científicos y divulgativos.</p>
     </div>
   </footer>
 
