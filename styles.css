@@ -35,34 +35,58 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
    1. CSS VARIABLES — PALETA Y DISEÑO
    ───────────────────────────────────────── */
 :root {
-  /* Paleta principal */
-  --color-accent-yellow:   #FFFD01;
-  --color-green-vivo:      #2DA641;
-  --color-coral:           #F6513B;
-  --color-burdeos:         #8F243C;
-  --color-mostaza:         #FAC068;
-  --color-green-oliva:     #4A7729;
-  --color-blue-medium:     #0077C8;
-  --color-blue-dark:       #1C5D91;
+/* ── Paleta de módulos ── */
+  --color-anatomica:       #E8521A;
+  --color-patologica:      #C4973A;
+  --color-aula:            #2B7ABF;
+  --color-actualidad:      #2E9E58;
 
-  /* Neutros de apoyo */
-  --color-bg:              #F9F6F0;
-  --color-bg-crema:        #F4EFE5;
+  /* ── Paleta UAM institucional ── */
+  --color-uam-verde:       #4A7729;
+  --color-uam-azul:        #1C5D91;
+
+  /* ── Acentos y acción ── */
+  --color-accent-yellow:   #E8521A;
+  --color-green-vivo:      #C4973A;
+  --color-coral:           #2E9E58;
+  --color-mostaza:         #C4973A;
+  --color-green-oliva:     #4A7729;
+  --color-blue-medium:     #2B7ABF;
+  --color-blue-dark:       #1C5D91;
+  --color-burdeos:         #8F243C;
+
+  /* ── Fondos ── */
+  --color-bg:              #F5F2EE;
+  --color-bg-crema:        #EDE8DF;
   --color-bg-white:        #FDFCFA;
-  --color-bg-dark:         #132338;
-  --color-bg-navy:         #0E1E30;
+  --color-bg-dark:         #2A2118;
+  --color-bg-navy:         #1C1510;
+
+  /* ── Texto ── */
   --color-text:            #1A1A1A;
   --color-text-soft:       #4A4A4A;
   --color-text-muted:      #7A7A7A;
-  --color-text-light:      #F9F6F0;
+  --color-text-light:      #F5F2EE;
+
+  /* ── Bordes ── */
   --color-border:          #D8D0C4;
   --color-border-soft:     #E8E2DA;
 
-  /* Translúcidos */
+  /* ── Translúcidos ── */
   --color-blue-alpha:      rgba(28, 93, 145, 0.08);
-  --color-yellow-alpha:    rgba(255, 253, 1, 0.12);
-  --color-mostaza-alpha:   rgba(250, 192, 104, 0.12);
-  --color-green-alpha:     rgba(45, 166, 65, 0.10);
+  --color-yellow-alpha:    rgba(232, 82, 26, 0.10);
+  --color-mostaza-alpha:   rgba(196, 151, 58, 0.12);
+  --color-green-alpha:     rgba(74, 119, 41, 0.10);
+
+  /* ── Módulos (alias para el CSS de tarjetas) ── */
+  --anat-bg:               #E8521A;
+  --anat-hover:            #FF8C5A;
+  --pato-bg:               #C4973A;
+  --pato-hover:            #F0C96A;
+  --aula-bg:               #2B7ABF;
+  --aula-hover:            #72B3F0;
+  --actu-bg:               #2E9E58;
+  --actu-hover:            #72D496;
 
   /* Tipografía */
   --font-body:   'Lexend', sans-serif;
@@ -100,7 +124,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-blue-dark);
+  color: var(--color-uam-azul);
   background: var(--color-blue-alpha);
   border: 1px solid rgba(28, 93, 145, 0.15);
   padding: 0.3rem 0.75rem;
@@ -149,9 +173,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .btn--primary {
-  background: var(--color-blue-dark);
+  background: var(--color-uam-azul);
   color: var(--color-text-light);
-  border: 2px solid var(--color-blue-dark);
+  border: 2px solid var(--color-uam-azul);
 }
 .btn--primary:hover {
   background: var(--color-bg-dark);
@@ -164,7 +188,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: absolute;
   bottom: 0; left: 0;
   width: 100%; height: 2px;
-  background: var(--color-accent-yellow);
+  background: var(--color-anatomica);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--duration) var(--ease);
@@ -173,11 +197,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .btn--outline {
   background: transparent;
-  color: var(--color-blue-dark);
-  border: 2px solid var(--color-blue-dark);
+  color: var(--color-uam-azul);
+  border: 2px solid var(--color-uam-azul);
 }
 .btn--outline:hover {
-  background: var(--color-blue-dark);
+  background: var(--color-uam-azul);
   color: var(--color-text-light);
   transform: translateY(-2px);
 }
@@ -230,7 +254,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .uam-logo-mark {
   width: 36px;
   height: 36px;
-  background: var(--color-blue-dark);
+  background: var(--color-uam-azul);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
@@ -241,7 +265,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-family: var(--font-title);
   font-size: 0.7rem;
   font-weight: 800;
-  color: var(--color-accent-yellow);
+  color: var(--color-anatomica);
   letter-spacing: 0.05em;
 }
 
@@ -281,7 +305,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-family: var(--font-title);
   font-size: 1rem;
   font-weight: 800;
-  color: var(--color-blue-dark);
+  color: var(--color-uam-azul);
   letter-spacing: -0.02em;
 }
 
@@ -318,16 +342,16 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: absolute;
   bottom: 2px; left: 0.7rem; right: 0.7rem;
   height: 2px;
-  background: var(--color-accent-yellow);
+  background: var(--color-anatomica);
   border-radius: 2px;
   transform: scaleX(0);
   transition: transform var(--duration) var(--ease);
 }
 
-.nav-link:hover { color: var(--color-blue-dark); }
+.nav-link:hover { color: var(--color-uam-azul); }
 .nav-link:hover::after,
 .nav-link.active::after { transform: scaleX(1); }
-.nav-link.active { color: var(--color-blue-dark); font-weight: 600; }
+.nav-link.active { color: var(--color-uam-azul); font-weight: 600; }
 
 /* Hamburger */
 .nav-toggle {
@@ -647,11 +671,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: 3px;
   transition: height var(--duration) var(--ease);
 }
-.module-card--anatomica::before { background: var(--color-blue-dark); }
-.module-card--patologica::before { background: var(--color-coral); }
+.module-card--anatomica::before { background: var(--color-uam-azul); }
+.module-card--patologica::before { background: var(--color-actualidad); }
 .module-card--coleccion::before { background: var(--color-burdeos); }
-.module-card--aula::before { background: var(--color-green-oliva); }
-.module-card--actualidad::before { background: var(--color-mostaza); }
+.module-card--aula::before { background: var(--color-uam-verde); }
+.module-card--actualidad::before { background: var(--color-patologica); }
 
 .module-card:hover {
   transform: translateY(-4px);
@@ -675,11 +699,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   justify-content: center;
   background: var(--color-blue-alpha);
   border-radius: var(--radius-md);
-  color: var(--color-blue-dark);
+  color: var(--color-uam-azul);
 }
-.module-card--patologica .module-icon { background: rgba(246,81,59,0.08); color: var(--color-coral); }
+.module-card--patologica .module-icon { background: rgba(246,81,59,0.08); color: var(--color-actualidad); }
 .module-card--coleccion .module-icon  { background: rgba(143,36,60,0.08); color: var(--color-burdeos); }
-.module-card--aula .module-icon       { background: var(--color-green-alpha); color: var(--color-green-oliva); }
+.module-card--aula .module-icon       { background: var(--color-green-alpha); color: var(--color-uam-verde); }
 .module-card--actualidad .module-icon { background: var(--color-mostaza-alpha); color: #a0700a; }
 
 .module-number {
@@ -712,12 +736,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: 0.4rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-blue-dark);
+  color: var(--color-uam-azul);
   transition: gap var(--duration) var(--ease), color var(--duration) var(--ease);
 }
-.module-card--patologica .module-link { color: var(--color-coral); }
+.module-card--patologica .module-link { color: var(--color-actualidad); }
 .module-card--coleccion .module-link  { color: var(--color-burdeos); }
-.module-card--aula .module-link       { color: var(--color-green-oliva); }
+.module-card--aula .module-link       { color: var(--color-uam-verde); }
 .module-card--actualidad .module-link { color: #a0700a; }
 
 .module-link:hover { gap: 0.7rem; }
@@ -827,10 +851,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: 10px;
   border-radius: 50%;
 }
-.region-dot--yellow  { background: var(--color-accent-yellow); }
-.region-dot--green   { background: var(--color-green-vivo); }
-.region-dot--mostaza { background: var(--color-mostaza); }
-.region-dot--coral   { background: var(--color-coral); }
+.region-dot--yellow  { background: var(--color-anatomica); }
+.region-dot--green   { background: var(--color-actualidad); }
+.region-dot--mostaza { background: var(--color-patologica); }
+.region-dot--coral   { background: var(--color-actualidad); }
 
 .region-code {
   font-family: var(--font-title);
@@ -867,7 +891,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .region-link {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-accent-yellow);
+  color: var(--color-anatomica);
   transition: opacity var(--duration) var(--ease);
 }
 .region-link:hover { opacity: 0.75; }
@@ -921,12 +945,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   top: 0; left: 0;
   width: 100%; height: 3px;
 }
-.pato-card--traumatica .pato-accent   { background: var(--color-coral); }
+.pato-card--traumatica .pato-accent   { background: var(--color-actualidad); }
 .pato-card--infecciosa .pato-accent   { background: var(--color-burdeos); }
-.pato-card--degenerativa .pato-accent { background: var(--color-blue-dark); }
-.pato-card--metabolica .pato-accent   { background: var(--color-mostaza); }
-.pato-card--neoplasica .pato-accent   { background: var(--color-green-oliva); }
-.pato-card--dental .pato-accent       { background: var(--color-blue-medium); }
+.pato-card--degenerativa .pato-accent { background: var(--color-uam-azul); }
+.pato-card--metabolica .pato-accent   { background: var(--color-patologica); }
+.pato-card--neoplasica .pato-accent   { background: var(--color-uam-verde); }
+.pato-card--dental .pato-accent       { background: var(--color-aula); }
 
 .pato-num {
   font-family: var(--font-title);
@@ -974,14 +998,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .pato-link {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-blue-dark);
+  color: var(--color-uam-azul);
   transition: color var(--duration) var(--ease);
 }
-.pato-card--traumatica .pato-link   { color: var(--color-coral); }
+.pato-card--traumatica .pato-link   { color: var(--color-actualidad); }
 .pato-card--infecciosa .pato-link   { color: var(--color-burdeos); }
 .pato-card--metabolica .pato-link   { color: #a0700a; }
-.pato-card--neoplasica .pato-link   { color: var(--color-green-oliva); }
-.pato-card--dental .pato-link       { color: var(--color-blue-medium); }
+.pato-card--neoplasica .pato-link   { color: var(--color-uam-verde); }
+.pato-card--dental .pato-link       { color: var(--color-aula); }
 
 .pato-link:hover { opacity: 0.75; }
 
@@ -1049,7 +1073,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-family: var(--font-title);
   font-size: 1.6rem;
   font-weight: 800;
-  color: var(--color-mostaza);
+  color: var(--color-patologica);
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -1131,7 +1155,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--color-mostaza);
+  background: var(--color-patologica);
   flex-shrink: 0;
 }
 
@@ -1204,7 +1228,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   justify-content: center;
   background: var(--color-green-alpha);
   border-radius: var(--radius-md);
-  color: var(--color-green-oliva);
+  color: var(--color-uam-verde);
 }
 
 .aula-card-title {
@@ -1225,7 +1249,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .aula-card-link {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-green-oliva);
+  color: var(--color-uam-verde);
   transition: opacity var(--duration) var(--ease);
 }
 .aula-card-link:hover { opacity: 0.7; }
@@ -1281,7 +1305,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .noticia-card--featured .noticia-title { color: var(--color-text-light); font-size: 1.05rem; }
 .noticia-card--featured .noticia-excerpt { color: rgba(255,255,255,0.5); }
 .noticia-card--featured .noticia-date { color: rgba(255,255,255,0.3); }
-.noticia-card--featured .noticia-link { color: var(--color-accent-yellow); }
+.noticia-card--featured .noticia-link { color: var(--color-anatomica); }
 
 .noticia-meta {
   display: flex;
@@ -1298,8 +1322,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   border-radius: 100px;
 }
 
-.noticia-cat--investigacion { background: var(--color-blue-alpha); color: var(--color-blue-dark); }
-.noticia-cat--proyecto      { background: var(--color-green-alpha); color: var(--color-green-oliva); }
+.noticia-cat--investigacion { background: var(--color-blue-alpha); color: var(--color-uam-azul); }
+.noticia-cat--proyecto      { background: var(--color-green-alpha); color: var(--color-uam-verde); }
 .noticia-cat--evento        { background: var(--color-mostaza-alpha); color: #a0700a; }
 .noticia-cat--publicacion   { background: rgba(143,36,60,0.08); color: var(--color-burdeos); }
 
@@ -1327,7 +1351,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .noticia-link {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-blue-dark);
+  color: var(--color-uam-azul);
   transition: opacity var(--duration) var(--ease);
   margin-top: auto;
 }
@@ -1363,7 +1387,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   width: 40px;
   height: 40px;
   min-width: 40px;
-  background: var(--color-blue-dark);
+  background: var(--color-uam-azul);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
@@ -1371,7 +1395,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-family: var(--font-title);
   font-size: 0.7rem;
   font-weight: 800;
-  color: var(--color-accent-yellow);
+  color: var(--color-anatomica);
   letter-spacing: 0.05em;
 }
 
@@ -2303,10 +2327,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   100% { transform: scale(1.8); opacity: 0; }
 }
 
-.sk-hotspot-dot--yellow  { background: var(--color-accent-yellow); color: var(--color-accent-yellow); }
-.sk-hotspot-dot--green   { background: var(--color-green-vivo);    color: var(--color-green-vivo); }
-.sk-hotspot-dot--mostaza { background: var(--color-mostaza);       color: var(--color-mostaza); }
-.sk-hotspot-dot--coral   { background: var(--color-coral);         color: var(--color-coral); }
+.sk-hotspot-dot--yellow  { background: var(--color-anatomica); color: var(--color-anatomica); }
+.sk-hotspot-dot--green   { background: var(--color-actualidad);    color: var(--color-actualidad); }
+.sk-hotspot-dot--mostaza { background: var(--color-patologica);       color: var(--color-patologica); }
+.sk-hotspot-dot--coral   { background: var(--color-actualidad);         color: var(--color-actualidad); }
 
 /* Etiqueta flotante */
 .sk-hotspot-label {
