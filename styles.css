@@ -381,8 +381,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* Variables de color por módulo */
 :root {
-  --anat-bg:       #E8521A;
-  --anat-hover:    #FF8C5A;
+  --anat-bg:       #c36b4f;
+  --anat-hover:    #e8956d;
   --anat-border:   #1a1a1a;
 
   --pato-bg:       #C4973A;
