@@ -272,3 +272,17 @@ if (heroBgImg) {
     heroBgImg.style.transform = 'translateY(' + scrollY * 0.3 + 'px)';
   }, { passive: true });
 }
+
+// ─────────────────────────────────────────
+// BARRA DE PROGRESO DE LECTURA
+// ─────────────────────────────────────────
+const readingProgress = document.getElementById('reading-progress');
+
+if (readingProgress) {
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    readingProgress.style.width = progress + '%';
+  }, { passive: true });
+}

@@ -36,7 +36,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
    ───────────────────────────────────────── */
 :root {
 /* ── Paleta de módulos ── */
-  --color-anatomica:       #E8521A;
+  --color-anatomica:       #c36b4f;
   --color-patologica:      #C4973A;
   --color-aula:            #2B7ABF;
   --color-actualidad:      #2E9E58;
@@ -79,8 +79,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   --color-green-alpha:     rgba(74, 119, 41, 0.10);
 
   /* ── Módulos (alias para el CSS de tarjetas) ── */
-  --anat-bg:               #E8521A;
-  --anat-hover:            #FF8C5A;
+  --anat-bg:               #c36b4f;
+  --anat-hover:            #e8956d;
   --pato-bg:               #C4973A;
   --pato-hover:            #F0C96A;
   --aula-bg:               #2B7ABF;
@@ -2364,4 +2364,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .sk-hotspot.is-active .sk-hotspot-label {
   opacity: 1;
   transform: translateX(0);
+}
+/* ─────────────────────────────────────────
+   BARRA DE PROGRESO DE LECTURA
+   ───────────────────────────────────────── */
+.reading-progress {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--color-anatomica);
+  z-index: 101;
+  transition: width 0.1s linear;
 }
