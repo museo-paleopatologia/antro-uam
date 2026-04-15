@@ -244,9 +244,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: 0.75rem;
   flex-shrink: 0;
   flex: 0 0 auto;
-  margin-right: 0;
-  position: relative;
-  z-index: 2;
+  width: calc(50% - 200px);
 }
 
 .uam-logo-wrap {
@@ -347,14 +345,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: color var(--duration) var(--ease), background var(--duration) var(--ease);
   position: relative;
   white-space: nowrap;
-}
-
-/* Búsqueda — empujada a la derecha */
-.header-search {
-  margin-left: auto;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 2;
 }
 
 .nav-link::after {
