@@ -411,10 +411,18 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* Colores de fondo por módulo */
-.hmod-card--anatomica  { background: var(--anat-bg); }
-.hmod-card--patologica { background: var(--pato-bg); }
-.hmod-card--aula       { background: var(--aula-bg); }
-.hmod-card--actualidad { background: var(--actu-bg); }
+.hmod-card--anatomica {
+  background: var(--anat-bg) url('assets/img/exploracion_anatomica.png') no-repeat bottom right / 55%;
+}
+.hmod-card--patologica {
+  background: var(--pato-bg) url('assets/img/exploracion_patologica.png') no-repeat bottom right / 50%;
+}
+.hmod-card--aula {
+  background: var(--aula-bg) url('assets/img/aula_virtual.png') no-repeat bottom right / 40%;
+}
+.hmod-card--actualidad {
+  background: var(--actu-bg) url('assets/img/actualidad.png') no-repeat bottom right / 40%;
+}
 
 /* ── Imagen ── */
 .hmod-card--anatomica {
@@ -755,7 +763,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .anatomica-layout {
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 480px 1fr;
   gap: var(--space-xl);
   align-items: start;
 }
