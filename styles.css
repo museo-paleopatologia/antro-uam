@@ -1601,14 +1601,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   box-shadow: 0 16px 48px rgba(0,0,0,0.12);
 }
 
-.hmod-card--anatomica {
-  background: #F2C4A0;
-  color: #1a1a1a;
-}
-.hmod-card--patologica {
-  background: #D4BC7D;
-  color: #1a1a1a;
-}
 
 /* Contenido interno */
 .hmod-card-content {
@@ -1718,16 +1710,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: 1.25rem;
 }
 
-.hmod-card--aula {
-  background: #A8C4D4;
-  color: #1a1a1a;
-  flex: 1;
-}
-.hmod-card--actualidad {
-  background: #A8D4B4;
-  color: #1a1a1a;
-  flex: 1;
-}
 
 .hmod-title-sm {
   font-family: var(--font-title);
