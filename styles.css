@@ -2263,7 +2263,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .skeleton-hotspot-container {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 420px;
   margin: 0 auto;
 }
 
