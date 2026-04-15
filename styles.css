@@ -736,7 +736,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .anatomica-header {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
 }
 
 .anatomica-header .section-title {
