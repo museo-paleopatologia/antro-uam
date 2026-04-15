@@ -59,8 +59,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   --color-bg:              #F5F2EE;
   --color-bg-crema:        #EDE8DF;
   --color-bg-white:        #FDFCFA;
-  --color-bg-dark:         #2A2118;
-  --color-bg-navy:         #1C1510;
+  --color-bg-dark:         #A68053;
+  --color-bg-navy:         #634e34;
 
   /* ── Texto ── */
   --color-text:            #1A1A1A;
