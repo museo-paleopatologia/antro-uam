@@ -1484,7 +1484,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
 .uam-logo-img {
-  height: 36px;
+  height: 32px;
+  max-width: 32px;
   width: auto;
   display: block;
 }
