@@ -419,7 +419,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ── Imagen ── */
 .hmod-card--anatomica {
   background-color: var(--anat-bg);
-  background-image: url('/assets/img/exploración_anatómica.png');
+  background-image: url('assets/img/exploracion_anatomica.png');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 55%;
@@ -427,7 +427,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .hmod-card--patologica {
   background-color: var(--pato-bg);
-  background-image: url('/assets/img/exploración_patológica.png');
+  background-image: url('assets/img/exploracion_patologica.png');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 50%;
@@ -435,7 +435,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .hmod-card--aula {
   background-color: var(--aula-bg);
-  background-image: url('/assets/img/aula_virtual.png');
+  background-image: url('assets/img/aula_virtual.png');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 40%;
@@ -443,7 +443,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .hmod-card--actualidad {
   background-color: var(--actu-bg);
-  background-image: url('/assets/img/actualidad.png');
+  background-image: url('assets/img/actualidad.png');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 40%;
