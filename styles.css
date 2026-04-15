@@ -242,18 +242,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   align-items: center;
   gap: 0.75rem;
   flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 .main-nav {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0;
 }
 
 .header-search {
   flex-shrink: 0;
-  justify-self: unset;
+  margin-left: auto;
 }
 
 /* UAM Logo */
