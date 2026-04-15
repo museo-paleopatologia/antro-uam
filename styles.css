@@ -568,10 +568,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
   letter-spacing: 0.02em;
 }
-.hmod-card--anatomica  .hmod-title-link:hover .hmod-title { color: var(--anat-hover); text-decoration-color: var(--anat-hover); }
-.hmod-card--patologica .hmod-title-link:hover .hmod-title { color: var(--pato-hover); text-decoration-color: var(--pato-hover); }
-.hmod-card--aula       .hmod-title-link:hover .hmod-title-sm { color: var(--aula-hover); text-decoration-color: var(--aula-hover); }
-.hmod-card--actualidad .hmod-title-link:hover .hmod-title-sm { color: var(--actu-hover); text-decoration-color: var(--actu-hover); }
+.hmod-card--anatomica  .hmod-title-link:hover .hmod-title { color: var(--anat-hover); }
+.hmod-card--patologica .hmod-title-link:hover .hmod-title { color: var(--pato-hover); }
+.hmod-card--aula       .hmod-title-link:hover .hmod-title-sm { color: var(--aula-hover); }
+.hmod-card--actualidad .hmod-title-link:hover .hmod-title-sm { color: var(--actu-hover); }
 /* ── Botón principal ── */
 .hmod-btn {
   display: block;
@@ -811,7 +811,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .region-card {
   background: rgba(245, 242, 238, 0.06);
   border: 2px solid rgba(245, 242, 238, 0.15);
-  border-radius: 4px;
+  border-radius: var(--radius-lg);
   box-shadow: 4px 4px 0px rgba(0,0,0,0.25);
   padding: 1.5rem;
   display: flex;
@@ -1581,8 +1581,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .hmod-title-link:hover .hmod-title,
 .hmod-title-link:hover .hmod-title-sm {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .hmod-title {
