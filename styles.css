@@ -443,6 +443,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-size: 40%;
 }
 
+.hmod-card--anatomica::after,
+.hmod-card--patologica::after,
+.hmod-card--aula::after,
+.hmod-card--actualidad::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-color: transparent;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
 /* ── Cuerpo de texto ── */
 .hmod-body {
   padding: 1.25rem 1.5rem;
