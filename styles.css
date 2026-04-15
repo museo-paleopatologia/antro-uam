@@ -234,7 +234,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: 68px;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  position: relative;
 }
 
 .header-brand {
@@ -243,26 +243,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: 0.75rem;
   flex-shrink: 0;
   flex: 0 0 auto;
-}
-
-.main-nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-}
-
-.header-search {
-  flex-shrink: 0;
-  margin-left: auto;
-}
-
-/* UAM Logo */
-.header-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-shrink: 0;
 }
 
 .uam-logo-wrap {
@@ -336,10 +316,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-weight: 400;
 }
 
-/* Nav */
+/* Nav — centrado absoluto */
 .main-nav {
-  margin: 0;
-  justify-self: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-list {
@@ -356,6 +337,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   border-radius: var(--radius-sm);
   transition: color var(--duration) var(--ease), background var(--duration) var(--ease);
   position: relative;
+}
+
+/* Búsqueda — empujada a la derecha */
+.header-search {
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .nav-link::after {
