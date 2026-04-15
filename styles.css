@@ -1499,7 +1499,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .lpp-logo-img {
-  height: 36px;
+  height: 32px;
+  max-width: 120px;
   width: auto;
   display: block;
   mix-blend-mode: multiply;
