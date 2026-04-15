@@ -2333,7 +2333,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .sk-hotspot-dot--yellow  { background: var(--color-anatomica); color: var(--color-anatomica); }
-.sk-hotspot-dot--green   { background: var(--color-actualidad);    color: var(--color-actualidad); }
+.sk-hotspot-dot--green   { background: var(--color-aula);    color: var(--color-aula); }
 .sk-hotspot-dot--mostaza { background: var(--color-patologica);       color: var(--color-patologica); }
 .sk-hotspot-dot--coral   { background: var(--color-actualidad);         color: var(--color-actualidad); }
 
