@@ -235,6 +235,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .header-brand {
@@ -320,24 +321,29 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* Nav — centrado absoluto */
 .main-nav {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none
 }
 
 .nav-list {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  pointer-events: all;
 }
 
 .nav-link {
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-text-soft);
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 0.6rem;
   border-radius: var(--radius-sm);
   transition: color var(--duration) var(--ease), background var(--duration) var(--ease);
   position: relative;
+  white-space: nowrap;
 }
 
 /* Búsqueda — empujada a la derecha */
