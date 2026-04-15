@@ -245,6 +245,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   flex-shrink: 0;
   flex: 0 0 auto;
   margin-right: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .uam-logo-wrap {
@@ -325,7 +327,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   right: 0;
   display: flex;
   justify-content: center;
-  pointer-events: none
+  pointer-events: none;
+  z-index: 1;
 }
 
 .nav-list {
@@ -350,6 +353,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .header-search {
   margin-left: auto;
   flex-shrink: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .nav-link::after {
@@ -624,28 +629,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   flex: 1;
 }
 
-/* ── Responsive ── */
-@media (max-width: 1024px) {
-  .hero-modulos-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-  .hmod-col-small {
-    grid-column: 1 / 3;
-    flex-direction: row;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-modulos-inner {
-    grid-template-columns: 1fr;
-  }
-  .hmod-col-small {
-    grid-column: 1 / 2;
-    flex-direction: column;
-  }
-  .hmod-img-wrap { height: 180px; }
-  .hmod-img-wrap--sm { height: 110px; }
-}
 /* ─────────────────────────────────────────
    6. MÓDULOS
    ───────────────────────────────────────── */
@@ -1482,96 +1465,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ─────────────────────────────────────────
-   13. RESPONSIVE
-   ───────────────────────────────────────── */
-@media (max-width: 1100px) {
-  .modules-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-    /* keep in flow */
-  }
-  .noticias-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .noticia-card--featured {
-    grid-column: 1 / 3;
-  }
-
-
-@media (max-width: 900px) {
-  :root {
-    --gutter: 1.25rem;
-    --space-xxl: 4rem;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    padding: var(--space-xl) var(--gutter);
-  }
-  .hero-visual { display: none; }
-
-  .anatomica-layout {
-    grid-template-columns: 1fr;
-  }
-  .anatomica-figure { display: none; }
-  .anatomica-cards { grid-template-columns: 1fr 1fr; }
-
-  .patologica-header { grid-template-columns: 1fr; }
-  .patologias-grid { grid-template-columns: 1fr 1fr; }
-
-  .coleccion-editorial { grid-template-columns: 1fr; }
-
-  .aula-header { grid-template-columns: 1fr; }
-  .aula-grid { grid-template-columns: 1fr 1fr; }
-
-  .noticias-grid { grid-template-columns: 1fr; }
-  .noticia-card--featured { grid-column: 1 / 2; }
-
-  .footer-inner { grid-template-columns: 1fr 1fr; }
-  .footer-brand-col { grid-column: 1 / 3; }
-
-  .footer-bottom { flex-direction: column; text-align: center; gap: 0.25rem; }
-
-  /* Show hamburger */
-  .nav-toggle { display: flex; }
-  .main-nav {
-    position: absolute;
-    top: 68px; left: 0; right: 0;
-    background: rgba(249,246,240,0.98);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--color-border-soft);
-    padding: var(--space-sm) var(--gutter);
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform var(--duration) var(--ease), opacity var(--duration) var(--ease);
-    z-index: 99;
-  }
-  .main-nav.is-open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: all;
-  }
-  .nav-list { flex-direction: column; gap: 0; align-items: flex-start; }
-  .nav-link { padding: 0.6rem 0; font-size: 0.95rem; }
-}
-
-@media (max-width: 600px) {
-  .modules-grid { grid-template-columns: 1fr 1fr; }
-  .anatomica-cards { grid-template-columns: 1fr; }
-  .patologias-grid { grid-template-columns: 1fr; }
-  .aula-grid { grid-template-columns: 1fr; }
-  .hero-meta { gap: var(--space-md); flex-wrap: wrap; }
-  .coleccion-cifras { flex-wrap: wrap; gap: var(--space-md); }
-  .footer-inner { grid-template-columns: 1fr; }
-  .footer-brand-col { grid-column: 1 / 2; }
-  .actualidad-header { flex-direction: column; align-items: flex-start; }
-  .brand-subtitle { display: none; }
-  .uam-dept { display: none; }
-}
-
-/* ─────────────────────────────────────────
    14. SCROLL ANIMATIONS
    ───────────────────────────────────────── */
 .reveal {
@@ -1803,32 +1696,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: opacity var(--duration) var(--ease);
 }
 .hmod-link-sm:hover { opacity: 0.6; }
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .hero-modulos-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-  .hmod-col-small {
-    grid-column: 1 / 3;
-    flex-direction: row;
-  }
-  .hmod-card--aula,
-  .hmod-card--actualidad {
-    flex: 1;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-modulos-inner {
-    grid-template-columns: 1fr;
-  }
-  .hmod-col-small {
-    grid-column: 1 / 2;
-    flex-direction: column;
-  }
-  .hmod-illustration { display: none; }
-}
 
 /* ─────────────────────────────────────────
    HERO PRINCIPAL
@@ -2124,30 +1991,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: 1px;
   flex: 1;
   background: linear-gradient(to right, #ccc, transparent);
-}
-
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-  }
-  .hero-right {
-    display: none;
-  }
-  .hero-h1 {
-    font-size: clamp(2.2rem, 8vw, 3.5rem);
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-  .hero-stats {
-    gap: 1rem;
-  }
 }
 
 /* ─────────────────────────────────────────
@@ -2450,4 +2293,119 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .header-search {
     display: none;
   }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .noticias-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .noticia-card--featured {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-modulos-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hmod-col-small {
+    grid-column: 1 / 3;
+    flex-direction: row;
+  }
+  .hmod-card--aula,
+  .hmod-card--actualidad {
+    flex: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --gutter: 1.25rem;
+    --space-xxl: 4rem;
+  }
+
+  /* Header */
+  .uam-logo-wrap { display: none; }
+  .header-search { display: none; }
+  .brand-divider { display: none; }
+  .nav-toggle { display: flex; }
+  .main-nav {
+    position: fixed;
+    top: 68px; left: 0; right: 0;
+    background: rgba(249,246,240,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border-soft);
+    padding: var(--space-sm) var(--gutter);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--duration) var(--ease), opacity var(--duration) var(--ease);
+    z-index: 99;
+    justify-content: flex-start;
+  }
+  .main-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  .nav-list { flex-direction: column; gap: 0; align-items: flex-start; }
+  .nav-link { padding: 0.6rem 0; font-size: 0.95rem; }
+
+  /* Hero principal */
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+
+  /* Hero grid (antiguo) */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: var(--space-xl) var(--gutter);
+  }
+  .hero-visual { display: none; }
+
+  /* Secciones */
+  .anatomica-layout { grid-template-columns: 1fr; }
+  .anatomica-figure { display: none; }
+  .anatomica-cards { grid-template-columns: 1fr 1fr; }
+  .patologica-header { grid-template-columns: 1fr; }
+  .patologias-grid { grid-template-columns: 1fr 1fr; }
+  .coleccion-editorial { grid-template-columns: 1fr; }
+  .aula-header { grid-template-columns: 1fr; }
+  .aula-grid { grid-template-columns: 1fr 1fr; }
+  .noticias-grid { grid-template-columns: 1fr; }
+  .noticia-card--featured { grid-column: 1 / 2; }
+
+  /* Footer */
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-brand-col { grid-column: 1 / 3; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 0.25rem; }
+}
+
+@media (max-width: 640px) {
+  .hero-modulos-inner { grid-template-columns: 1fr; }
+  .hmod-col-small {
+    grid-column: 1 / 2;
+    flex-direction: column;
+  }
+  .hmod-illustration { display: none; }
+}
+
+@media (max-width: 600px) {
+  .modules-grid { grid-template-columns: 1fr 1fr; }
+  .anatomica-cards { grid-template-columns: 1fr; }
+  .patologias-grid { grid-template-columns: 1fr; }
+  .aula-grid { grid-template-columns: 1fr; }
+  .hero-meta { gap: var(--space-md); flex-wrap: wrap; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .hero-stats { gap: 1rem; }
+  .coleccion-cifras { flex-wrap: wrap; gap: var(--space-md); }
+  .footer-inner { grid-template-columns: 1fr; }
+  .footer-brand-col { grid-column: 1 / 2; }
+  .actualidad-header { flex-direction: column; align-items: flex-start; }
+  .brand-subtitle { display: none; }
+  .uam-dept { display: none; }
 }
