@@ -744,7 +744,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 80% at 15% 50%, rgba(180, 130, 80, 0.7) 0%, transparent 70%),
+    radial-gradient(ellipse 120% 100% at 15% 50%, rgba(180, 130, 80, 0.7) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 80% at 85% 30%, rgba(160, 110, 60, 0.5) 0%, transparent 65%);
   pointer-events: none;
 }
 
