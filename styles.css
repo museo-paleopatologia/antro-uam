@@ -387,21 +387,25 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* Variables de color por módulo */
 :root {
-  --anat-bg:       #c36b4f;
-  --anat-hover:    #e8956d;
-  --anat-border:   #1a1a1a;
+  --anat-bg:         #c36b4f;
+  --anat-hover:      #e8956d;
+  --anat-border:     #1a1a1a;
 
-  --pato-bg:       #C4973A;
-  --pato-hover:    #F0C96A;
-  --pato-border:   #1a1a1a;
+  --pato-bg:         #C4973A;
+  --pato-hover:      #F0C96A;
+  --pato-border:     #1a1a1a;
 
-  --aula-bg:       #2B7ABF;
-  --aula-hover:    #72B3F0;
-  --aula-border:   #1a1a1a;
+  --coleccion-bg:    #7B3F5E;
+  --coleccion-hover: #c4607a;
+  --coleccion-border:#1a1a1a;
 
-  --actu-bg:       #2E9E58;
-  --actu-hover:    #72D496;
-  --actu-border:   #1a1a1a;
+  --aula-bg:         #2B7ABF;
+  --aula-hover:      #72B3F0;
+  --aula-border:     #1a1a1a;
+
+  --actu-bg:         #2E9E58;
+  --actu-hover:      #72D496;
+  --actu-border:     #1a1a1a;
 }
 
 .hero-modulos {
@@ -454,6 +458,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 50%;
+}
+
+.hmod-card--coleccion {
+  background: var(--coleccion-bg);
+  color: #1a1a1a;
+  flex: 1;
 }
 
 .hmod-card--aula {
@@ -603,6 +613,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: color 0.18s ease;
   margin-top: auto;
 }
+.hmod-card--coleccion .hmod-link-sm:hover { color: #c4607a; }
 .hmod-card--aula       .hmod-link-sm:hover { color: var(--aula-hover); }
 .hmod-card--actualidad .hmod-link-sm:hover { color: var(--actu-hover); }
 
