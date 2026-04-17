@@ -826,7 +826,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hmod-link-sm {
   font-size: 0.82rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.9);
+  color: rgba(0,0,0,0.7);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
