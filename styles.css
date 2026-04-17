@@ -709,22 +709,26 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .hmod-card--coleccion {
   background-color: var(--coleccion-bg);
+  background-image: url('assets/img/coleccion.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 35%;
   flex: 1;
 }
 .hmod-card--aula {
   background-color: var(--aula-bg);
   background-image: url('assets/img/aula_virtual.png');
   background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 55%;
+  background-position: top right;
+  background-size: 35%;
   flex: 1;
 }
 .hmod-card--actualidad {
   background-color: var(--actu-bg);
   background-image: url('assets/img/actualidad.png');
   background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 55%;
+  background-position: top right;
+  background-size: 35%;
   flex: 1;
 }
 
@@ -757,8 +761,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  color: #1a1a1a;
+  text-shadow: none;
 }
 
 /* ── Subtítulos ── */
@@ -770,7 +774,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .hmod-sub-sm {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.82);
+  color: rgba(0,0,0,0.7);
   line-height: 1.55;
   flex: 1;
 }
