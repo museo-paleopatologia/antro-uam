@@ -366,6 +366,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero-wrapper {
   position: relative;
   overflow: hidden;
+  padding-bottom: var(--space-xl);
 }
 
 .hero-wrapper::before {
@@ -421,15 +422,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: linear-gradient(
     105deg,
     rgba(245, 242, 238, 0.97) 0%,
-    rgba(245, 242, 238, 0.92) 45%,
-    rgba(245, 242, 238, 0.6) 70%,
+    rgba(245, 242, 238, 0.92) 40%,
+    rgba(245, 242, 238, 0.6) 65%,
     rgba(245, 242, 238, 0.2) 100%
   ),
   linear-gradient(
     to bottom,
-    transparent 0%
-    transparent 70%
-    rgba(245, 242, 238, 0.6) 85%,
+    transparent 60%
+    rgba(245, 242, 238, 0.6) 80%,
     rgba(245, 242, 238, 0.95) 100%
   );
 }
@@ -1023,9 +1023,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .region-card {
-  border: 2px solid rgba(245, 242, 238, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--radius-lg);
-  box-shadow: 4px 4px 0px rgba(0,0,0,0.25);
+  box-shadow: 5px 5px 0px rgba(0,0,0,0.35);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -1035,13 +1035,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .region-card:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+  box-shadow: 8px 8px 0px rgba(0,0,0,0.4);
 }
 
-.region-card[data-region="cranio"] { background: rgba(195, 107, 79, 0.18); border-color: rgba(195, 107, 79, 0.3); }
-.region-card[data-region="tronco"] { background: rgba(196, 151, 58, 0.18); border-color: rgba(196, 151, 58, 0.3); }
-.region-card[data-region="sup"]    { background: rgba(43, 122, 191, 0.18); border-color: rgba(43, 122, 191, 0.3); }
-.region-card[data-region="inf"]    { background: rgba(46, 158, 88, 0.18);  border-color: rgba(46, 158, 88, 0.3); }
+.region-card[data-region="cranio"] { background: rgba(195, 107, 79, 0.28); border-color: rgba(195, 107, 79, 0.6); }
+.region-card[data-region="tronco"] { background: rgba(196, 151, 58, 0.28); border-color: rgba(196, 151, 58, 0.6); }
+.region-card[data-region="sup"]    { background: rgba(43, 122, 191, 0.28); border-color: rgba(43, 122, 191, 0.6); }
+.region-card[data-region="inf"]    { background: rgba(46, 158, 88, 0.28);  border-color: rgba(46, 158, 88, 0.6); }
 
 .region-card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; }
 
