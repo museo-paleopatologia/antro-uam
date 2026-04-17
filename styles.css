@@ -267,7 +267,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .lav-logo-img {
-  height: 60px;
+  height: 65px;
   max-width: 200px;
   width: auto;
   display: block;
@@ -361,6 +361,34 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ─────────────────────────────────────────
    6. HERO PRINCIPAL
    ───────────────────────────────────────── */
+
+/* ── Contenedor compartido hero + módulos ── */
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wrapper::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image: url('assets/img/fondo_hero.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  z-index: 0;
+  will-change: transform;
+  transform: translateY(var(--parallax-y, 0));
+  transition: none;
+}
+
+.hero-wrapper .hero-bg,
+.hero-wrapper.hero-bg-img {
+  display:none;
+}
+
+/* ── Hero principal ── */
 .hero-principal {
   position: relative;
   min-height: 85vh;
@@ -658,10 +686,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ─────────────────────────────────────────
    7. HERO MÓDULOS (inicio)
    ───────────────────────────────────────── */
+.hero-principal,
 .hero-modulos {
-  background: #F5F0E8;
-  padding: calc(68px + 1.5rem) var(--gutter) 1.5rem;
-  min-height: 100vh;
+  background: transparent;
+  position: relative;
+  z-index:1;
+}
+
+ .hero-modulos {
+  padding: 2rem var (--gutter) var(--space-xl);
   display: flex;
   align-items: center;
 }
@@ -1492,7 +1525,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .footer-lav-img {
-  height: 50px;
+  height: 60px;
   width: auto;
   display: block;
 }
