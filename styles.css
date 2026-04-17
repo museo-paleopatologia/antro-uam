@@ -1531,6 +1531,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: block;
 }
 
+.lav-logo-img {
+  height: 40px;
+  max-width: 140px;
+  width: auto;
+  display: block;
+}
+
 /* ─────────────────────────────────────────
    HERO MÓDULOS (reemplaza hero anterior)
    ───────────────────────────────────────── */
