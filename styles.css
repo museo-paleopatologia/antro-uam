@@ -366,7 +366,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero-wrapper {
   position: relative;
   overflow: hidden;
-  padding-bottom: 30vh;
 }
 
 .hero-wrapper::before {
@@ -396,9 +395,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: calc(68px + 3rem) var(--gutter) 3rem;
+  padding: calc(68px + 3rem) var(--gutter) 0rem;
   overflow: hidden;
-  background: #F5F2EE;
+  background: transparent;
 }
 
 .hero-bg {
@@ -421,17 +420,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   z-index: 2;
   background: linear-gradient(
     105deg,
-    rgba(245, 242, 238, 0.97) 0%,
-    rgba(245, 242, 238, 0.92) 40%,
-    rgba(245, 242, 238, 0.6) 65%,
-    rgba(245, 242, 238, 0.2) 100%
-  ),
-  linear-gradient(
-    to bottom,
-    transparent 60%,
-    rgba(245, 242, 238, 0.6) 80%,
-    rgba(245, 242, 238, 0.95) 100%
-  );
+      rgba(245, 242, 238, 0.95) 0%,
+      rgba(245, 242, 238, 0.75) 35%,
+      rgba(245, 242, 238, 0.2) 55%,
+      transparent 70%
+    );
 }
 
 .hero-inner {
@@ -701,7 +694,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
  .hero-modulos {
-  padding: 2rem var(--gutter) var(--space-xl);
+  padding: 1rem var(--gutter) var(--space-xl);
   display: flex;
   align-items: center;
 }
