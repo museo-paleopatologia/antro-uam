@@ -660,7 +660,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
    ───────────────────────────────────────── */
 .hero-modulos {
   background: #F5F0E8;
-  padding: calc(68px + 2rem) var(--gutter) var(--space-xl);
+  padding: calc(68px + 1.5rem) var(--gutter) 1.5rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -671,7 +671,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 360px;
+  grid-template-columns: 1fr 1fr 320px;
   gap: 1rem;
   align-items: stretch;
 }
@@ -698,14 +698,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-image: url('assets/img/exploracion_anatomica.png');
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 55%;
+  background-size: 52%;
 }
 .hmod-card--patologica {
   background-color: var(--pato-bg);
   background-image: url('assets/img/exploracion_patologica.png');
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 50%;
+  background-size: 48%;
 }
 .hmod-card--coleccion {
   background-color: var(--coleccion-bg);
@@ -716,7 +716,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-image: url('assets/img/aula_virtual.png');
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 40%;
+  background-size: 55%;
   flex: 1;
 }
 .hmod-card--actualidad {
@@ -724,44 +724,54 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-image: url('assets/img/actualidad.png');
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 40%;
+  background-size: 55%;
   flex: 1;
 }
 
 /* ── Cuerpo de texto ── */
 .hmod-body {
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 0.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.6rem;
   flex: 1;
 }
 
-/* ── Títulos — mismo tamaño en todas las tarjetas ── */
-.hmod-title,
-.hmod-title-sm {
+/* ── Títulos grandes (col 1 y 2) ── */
+.hmod-title {
   font-family: var(--font-title);
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.0;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  color: #1a1a1a;
+  text-shadow: none;
 }
 
-.hmod-title    { color: #1a1a1a; }
-.hmod-title-sm { color: #fff; }
+/* ── Títulos pequeños (col 3) ── */
+.hmod-title-sm {
+  font-family: var(--font-title);
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
 
 /* ── Subtítulos ── */
 .hmod-sub {
-  font-size: 0.88rem;
-  color: rgba(0,0,0,0.65);
-  line-height: 1.65;
+  font-size: 0.83rem;
+  color: rgba(0,0,0,0.7);
+  line-height: 1.55;
+  max-width: 32ch;
 }
 .hmod-sub-sm {
-  font-size: 0.83rem;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.6;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.55;
   flex: 1;
 }
 
@@ -769,52 +779,53 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hmod-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .hmod-tag {
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: #1a1a1a;
-  background: rgba(0,0,0,0.1);
-  border: 2px solid rgba(0,0,0,0.25);
-  padding: 0.28rem 0.7rem;
+  background: rgba(255,255,255,0.3);
+  border: 1.5px solid rgba(0,0,0,0.2);
+  padding: 0.22rem 0.6rem;
   border-radius: 100px;
-  transition: background 0.18s ease, border-color 0.18s ease;
+  transition: background 0.18s ease;
   letter-spacing: 0.02em;
+  backdrop-filter: blur(4px);
 }
 .hmod-tag:hover {
-  background: rgba(0,0,0,0.18);
-  border-color: rgba(0,0,0,0.5);
+  background: rgba(255,255,255,0.5);
 }
 
-/* ── Botón principal ── */
+/* ── Botón principal translúcido ── */
 .hmod-btn {
   display: block;
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-align: center;
-  padding: 0.9rem 1.5rem;
-  border-top: 3px solid #1a1a1a;
-  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-top: 2px solid rgba(0,0,0,0.25);
+  color: #1a1a1a;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(6px);
   transition: background 0.18s ease, color 0.18s ease;
   margin-top: auto;
 }
-.hmod-card--anatomica  .hmod-btn { background: var(--anat-bg); }
-.hmod-card--patologica .hmod-btn { background: var(--pato-bg); }
-.hmod-card--anatomica  .hmod-btn:hover { background: var(--anat-hover); color: var(--anat-bg); }
-.hmod-card--patologica .hmod-btn:hover { background: var(--pato-hover); color: var(--pato-bg); }
+.hmod-btn:hover {
+  background: rgba(255,255,255,0.45);
+}
 
 /* ── Link pequeño ── */
 .hmod-link-sm {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #fff;
+  color: rgba(255,255,255,0.9);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1.5px;
   transition: color 0.18s ease;
   margin-top: auto;
 }
