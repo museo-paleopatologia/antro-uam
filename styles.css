@@ -395,7 +395,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   --pato-hover:      #F0C96A;
   --pato-border:     #1a1a1a;
 
-  --coleccion-bg:    #7B3F5E;
+  --coleccion-bg:    #9B3060;
   --coleccion-hover: #c4607a;
   --coleccion-border:#1a1a1a;
 
@@ -497,10 +497,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* ── Cuerpo de texto ── */
 .hmod-body {
-  padding: 1.25rem 1.5rem;
+  padding: 0,9rem 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.4rem;
   flex: 1;
 }
 
@@ -531,7 +531,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .hmod-title-sm {
   font-family: var(--font-title);
-  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: 0.02em;
@@ -613,7 +613,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: color 0.18s ease;
   margin-top: auto;
 }
-.hmod-card--coleccion .hmod-link-sm:hover { color: #c4607a; }
+.hmod-card--coleccion .hmod-link-sm:hover { color: var(--coleccion-hover); }
 .hmod-card--aula       .hmod-link-sm:hover { color: var(--aula-hover); }
 .hmod-card--actualidad .hmod-link-sm:hover { color: var(--actu-hover); }
 
@@ -621,9 +621,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hmod-col-small {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0,75rem;
 }
 .hmod-card--aula,
+.hmod-card--actualidad,
 .hmod-card--actualidad {
   flex: 1;
 }
