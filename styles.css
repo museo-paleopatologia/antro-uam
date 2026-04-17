@@ -1525,13 +1525,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   opacity: 0.75;
 }
 
-.lpp-logo-img {
-  height: 40px;
-  max-width: 140px;
+.footer-lav-img {
+  height: 50px;
   width: auto;
   display: block;
-  mix-blend-mode: multiply;
-  background: transparent;
 }
 
 /* ─────────────────────────────────────────
