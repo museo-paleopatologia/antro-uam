@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exploración anatómica — Museo Virtual de Paleopatología</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Lexend+Exa:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+</head>
+<body>
+
+  <!-- HEADER (igual que index.html) -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="lpp-logo-wrap">
+          <img src="assets/img/logo_LAPP.jpeg" alt="Laboratorio de Poblaciones del Pasado" class="lpp-logo-img" />
+        </div>
+        <div class="brand-divider"></div>
+        <div class="uam-logo-wrap">
+          <img src="assets/img/logo_uam.svg" alt="Universidad Autónoma de Madrid - Facultad de Ciencias" class="uam-logo-img" />
+        </div>
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#anatomica" class="nav-link active">Exploración anatómica</a></li>
+          <li><a href="index.html#patologica" class="nav-link">Exploración patológica</a></li>
+          <li><a href="coleccion.html" class="nav-link">Colección</a></li>
+          <li><a href="index.html#aula" class="nav-link">Aula virtual</a></li>
+          <li><a href="index.html#actualidad" class="nav-link">Actualidad</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO DE REGIÓN -->
+    <section class="region-hero" id="region-hero">
+      <div class="region-hero-inner">
+        <div class="region-hero-breadcrumb">
+          <a href="index.html">Inicio</a>
+          <span>→</span>
+          <a href="index.html#anatomica">Exploración anatómica</a>
+          <span>→</span>
+          <span id="breadcrumb-region">Región</span>
+        </div>
+        <div class="region-hero-content">
+          <div class="region-hero-tag" id="region-tag">R.01</div>
+          <h1 class="region-hero-title" id="region-titulo">Cráneo</h1>
+          <p class="region-hero-desc" id="region-descripcion">Neurocráneo, viscerocráneo, mandíbula y estructuras faciales.</p>
+        </div>
+        <div class="region-hero-stats">
+          <div class="region-stat">
+            <span class="region-stat-num" id="stat-piezas">0</span>
+            <span class="region-stat-label">Piezas</span>
+          </div>
+          <div class="region-stat">
+            <span class="region-stat-num" id="stat-patologias">0</span>
+            <span class="region-stat-label">Patologías</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="region-filtros">
+      <div class="region-filtros-inner">
+        <span class="filtros-label">Filtrar por patología:</span>
+        <div class="filtros-wrap" id="filtros-wrap">
+          <button class="filtro-btn filtro-btn--active" data-filtro="todas">Todas</button>
+          <button class="filtro-btn" data-filtro="traumatica">Traumáticas</button>
+          <button class="filtro-btn" data-filtro="infecciosa">Infecciosas</button>
+          <button class="filtro-btn" data-filtro="degenerativa">Degenerativas</button>
+          <button class="filtro-btn" data-filtro="metabolica">Metabólicas</button>
+          <button class="filtro-btn" data-filtro="neoplasica">Neoplásicas</button>
+          <button class="filtro-btn" data-filtro="dental">Dentales</button>
+          <button class="filtro-btn" data-filtro="congenita">Congénitas</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID DE PIEZAS -->
+    <section class="region-piezas">
+      <div class="region-piezas-inner">
+        <div class="piezas-grid" id="piezas-grid">
+          <!-- Las cards se generan con JavaScript -->
+        </div>
+        <div class="piezas-empty" id="piezas-empty" style="display:none;">
+          <p>No hay piezas con este tipo de patología en esta región.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <div class="footer-logo-mark">UAM</div>
+          <div class="footer-logo-text">
+            <span class="footer-project">Museo Virtual de Paleopatología</span>
+            <span class="footer-inst">Universidad Autónoma de Madrid</span>
+          </div>
+        </div>
+        <p class="footer-desc">Plataforma académica de divulgación y estudio de patologías óseas en contextos históricos y arqueológicos.</p>
+        <p class="footer-proto">⚠ Prototipo educativo — Proyecto de Trabajo Fin de Grado</p>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-col-title">Módulos</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#anatomica">Exploración anatómica</a></li>
+          <li><a href="index.html#patologica">Exploración patológica</a></li>
+          <li><a href="coleccion.html">Colección</a></li>
+          <li><a href="index.html#aula">Aula virtual</a></li>
+          <li><a href="index.html#actualidad">Actualidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-info-col">
+        <h4 class="footer-col-title">Información</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#">Sobre el proyecto</a></li>
+          <li><a href="#">Metodología</a></li>
+          <li><a href="#">Equipo</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Museo Virtual de Paleopatología · Universidad Autónoma de Madrid</span>
+      <span>Proyecto académico sin fines comerciales</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="region-script.js"></script>
+</body>
+</html>
